@@ -38,6 +38,13 @@ export default function FaqAccordion({ groups }: FaqAccordionProps) {
                       {item.link ? <Link href={item.link.href}>{item.link.label}</Link> : null}
                       {item.after}
                     </p>
+                    {item.bullets ? (
+                      <ul className="faq__list">
+                        {item.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
                 </div>
               );
