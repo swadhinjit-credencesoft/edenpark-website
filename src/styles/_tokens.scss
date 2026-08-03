@@ -1,0 +1,42 @@
+// ==========================================================================
+// Eden Park Motel — brand tokens (Guidelines v2.0)
+// Colour (Guideline §06), spacing (§13), shadows, easing and the
+// Villa Roofline pattern (§09).
+// ==========================================================================
+
+:root {
+  /* Colour (Guideline §06) */
+  --navy:  #0D3B66;
+  --navy-2:#12518D;
+  --blue:  #1D7FC1;
+  --sky:   #5FA8D3;
+  --tint:  #EAF3FA;
+  --white: #FFFFFF;
+  --char:  #2D3436;
+  --gold:  #C9A227;
+
+  /* Spacing tokens (Guideline §13) */
+  --pad: 30px;
+  --gap: 22px;
+  --card-gap: 24px;
+  --section-gap: 80px;
+  --wrap: 1200px;
+  --radius: 12px;
+  --radius-pill: 999px;
+
+  --shadow: 0 4px 16px rgba(13, 59, 102, .08);
+  --ease: cubic-bezier(.4, 0, .2, 1);
+
+  /* Villa Roofline pattern (Guideline §09) — gable peaks from the logo arc.
+     Texture only: white line work at 10–15% on navy. Never on white. */
+  --roofline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30'%3E%3Cpath d='M0 30 L30 6 L60 30' fill='none' stroke='%23ffffff' stroke-width='2' opacity='0.13'/%3E%3C/svg%3E");
+}
+
+/* Roofline texture layer — applied over navy surfaces */
+.roofed { position: relative; }
+.roofed::after {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background-image: var(--roofline); background-repeat: repeat;
+  pointer-events: none;
+}
+.roofed > .wrap, .roofed > .masthead__inner { position: relative; z-index: 3; }

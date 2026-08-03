@@ -1,0 +1,16 @@
+// ==========================================================================
+// Footer.
+// ==========================================================================
+
+.footer { background: var(--navy); color: var(--tint); padding: 64px 0 30px; }
+.footer h2 { color: #fff; font-family: Inter, sans-serif; font-size: 1rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px; }
+.footer a { color: var(--tint); }
+.footer img { height: 44px; width: auto; margin-bottom: 20px; }
+.footer ul { list-style: none; margin: 0; padding: 0; }
+.footer li + li { margin-top: 8px; }
+.footer__grid { display: grid; gap: 44px; grid-template-columns: 1.5fr 1.5fr 1fr; }
+.footer__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.footer__bar {
+  display: flex; flex-wrap: wrap; gap: var(--gap); justify-content: space-between;
+  border-top: 1px solid rgba(95, 168, 211, .5); margin-top: 44px; padding-top: 24px; font-size: .82rem;
+}

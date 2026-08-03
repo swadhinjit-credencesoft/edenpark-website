@@ -1,0 +1,16 @@
+// ==========================================================================
+// FAQ accordion.
+// ==========================================================================
+
+.acc { border: 2px solid var(--tint); border-radius: var(--radius); overflow: hidden; background: #fff; }
+.acc + .acc { margin-top: 14px; }
+.acc__btn {
+  width: 100%; text-align: left; background: #fff; border: 0; cursor: pointer;
+  padding: 22px var(--pad); font-family: Inter, sans-serif; font-size: 1.02rem; font-weight: 600;
+  color: var(--navy); display: flex; justify-content: space-between; align-items: center; gap: var(--gap);
+}
+.acc__icon { color: var(--blue); font-size: 1.4rem; line-height: 1; flex: none; }
+.acc__panel { padding: 0 var(--pad) 24px; background: var(--tint); }
+.acc__panel p { margin: 20px 0 0; }
+.acc__panel p:first-child { margin-top: 22px; }
+.acc[data-open="false"] .acc__panel { display: none; }

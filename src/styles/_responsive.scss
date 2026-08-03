@@ -1,0 +1,74 @@
+// ==========================================================================
+// Responsive breakpoints + reduced motion.
+// Desktop-first: base styles target wide screens; mobile overrides stack below.
+// Header uses the original pattern — hamburger visible at every width — so
+// no header re-declarations are needed here.
+// ==========================================================================
+
+/* Tablet: grids breathe a little less */
+@media (max-width: 1100px) {
+  .masthead__logo img { height: 38px; }
+  .mosaic { grid-template-columns: 1fr; }
+  .mosaic__row { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.2fr 1fr; }
+  .ridge { width: 62%; opacity: .55; }
+  .pricecard { position: static; margin-top: 26px; display: inline-flex; }
+  .room, .post { grid-template-columns: 1fr; }
+  .hero__inner { padding: 56px 0 84px; }
+  .banner__inner { padding: 60px 0 58px; }
+}
+
+/* Small tablet / large phone */
+@media (max-width: 760px) {
+  :root { --section-gap: 56px; --pad: 22px; }
+  .masthead__quick { display: none; }
+  .masthead__logo { position: static; transform: none; margin-inline: auto 0; }
+  .mosaic__row { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__cols { grid-template-columns: 1fr 1fr; }
+  .trust { margin-top: 0; border-radius: 0; }
+  .hero__inner { padding: 48px 0 72px; }
+  .banner__inner { padding: 50px 0 48px; }
+  .section { padding: 48px 0; }
+  .section__head { margin-bottom: 28px; }
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
+  .tile--lg { aspect-ratio: 16 / 10; }
+  .tile--sm { aspect-ratio: 16 / 10; }
+  .tile--wide { aspect-ratio: 16 / 10; }
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  :root { --pad: 18px; }
+  .wrap { width: min(100% - 36px, var(--wrap) - 120px); }
+  .masthead__inner { min-height: 64px; gap: 12px; }
+  .masthead__logo img { height: 34px; }
+  .navtoggle { padding: 6px; margin-left: -6px; }
+  .btn--book { padding: 9px 14px; font-size: .72rem; }
+  .hero__inner { padding: 40px 0 64px; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .pricecard { margin-top: 20px; flex-wrap: wrap; }
+  .banner__inner { padding: 44px 0 42px; }
+  h1 { font-size: clamp(1.8rem, 7.5vw, 2.4rem); }
+  .club { flex-direction: column; align-items: stretch; }
+  .club__perk { justify-content: flex-start; }
+  .room, .post { padding: 18px; gap: 16px; }
+  .room__media { aspect-ratio: 4 / 3; }
+  .room__foot { flex-direction: column; align-items: flex-start; }
+  .footer__cols { grid-template-columns: 1fr; gap: 20px; }
+  .footer__grid { gap: 34px; }
+  .footer__bar { flex-direction: column; gap: 10px; }
+  .toolbar { padding: 14px; gap: 14px; }
+  .filters { gap: 8px; margin: 16px 0 26px; }
+  .filter { padding: 10px 16px; }
+  .pager { justify-content: center; }
+  .pager__pages { margin-left: 0; }
+  .acc__btn { padding: 18px 18px; font-size: .95rem; }
+  .acc__panel { padding: 0 18px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

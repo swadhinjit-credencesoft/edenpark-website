@@ -1,0 +1,114 @@
+// ==========================================================================
+// Sections, trust bar, cards, chips, grids, club, mosaic, rooms, stats, quote.
+// ==========================================================================
+
+.section { padding: var(--section-gap) 0; }
+.section--tint { background: var(--tint); }
+.section--navy { background: linear-gradient(90deg, var(--navy), var(--navy-2)); color: #fff; }
+.section--navy h2 { color: #fff; }
+.section__head { margin-bottom: 40px; }
+.section__head p { margin: 12px 0 0; }
+
+/* ---------- Trust bar ---------- */
+.trust { background: var(--navy); color: #fff; border-radius: 6px; margin-top: -34px; position: relative; z-index: 4; }
+.trust__grid {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--gap); padding: 20px var(--pad);
+}
+.trust__lead { display: flex; align-items: center; gap: 14px; padding-right: var(--gap);
+  border-right: 1px solid rgba(255,255,255,.35); }
+.trust__lead strong { font-size: 1.9rem; line-height: 1; }
+.trust__lead small { font-size: .8rem; font-weight: 400; }
+.trust__lead span { font-size: .78rem; color: var(--tint); line-height: 1.35; }
+.trust__item { flex: 1 1 130px; text-align: center; }
+.trust__item span { display: block; font-size: .82rem; color: var(--tint); }
+.trust__item strong { font-size: 1.15rem; }
+.trust__item small { font-size: .75rem; font-weight: 400; }
+.trust .btn { margin-left: auto; }
+
+/* ---------- Cards & chips ---------- */
+.card {
+  background: #fff; border: 2px solid var(--tint); border-radius: var(--radius);
+  padding: var(--pad); position: relative;
+}
+.card--accent { border-top: 5px solid var(--blue); }
+.card--gold   { border-top: 5px solid var(--gold); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.chip {
+  background: var(--tint); color: var(--navy); border-radius: var(--radius-pill);
+  padding: 8px 16px; font-size: .82rem;
+}
+.chip--gold { background: var(--gold); color: var(--navy); font-weight: 600; }
+.chip--navy { background: var(--navy); color: #fff; }
+
+.grid { display: grid; gap: var(--card-gap); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+
+/* ---------- Direct booking club ---------- */
+.club { display: flex; flex-wrap: wrap; gap: var(--gap); align-items: center; margin-top: 24px; }
+.club__perk {
+  display: flex; align-items: center; gap: 12px; background: #fff;
+  border-radius: var(--radius-pill); padding: 12px 22px; font-weight: 600; color: var(--navy);
+}
+.club__tick {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--navy);
+  display: grid; place-items: center; flex: none;
+}
+.club__tick svg { width: 12px; height: 12px; }
+
+/* ---------- Surroundings mosaic ---------- */
+.mosaic { display: grid; gap: var(--card-gap); grid-template-columns: 2fr 1fr; }
+.mosaic__side { display: grid; gap: var(--card-gap); }
+.mosaic__row { display: grid; gap: var(--card-gap); grid-template-columns: repeat(3, 1fr); grid-column: 1 / -1; }
+.tile { position: relative; border-radius: var(--radius); overflow: hidden; }
+.tile img { width: 100%; height: 100%; object-fit: cover; }
+/* next/image `fill` is absolutely positioned, so aspect ratios live on the frame. */
+.tile--lg { aspect-ratio: 7 / 4; }
+.tile--sm { aspect-ratio: 37 / 19; }
+.tile--wide { aspect-ratio: 353 / 220; }
+.tile figcaption {
+  position: absolute; left: 16px; bottom: 16px;
+  background: rgba(13, 59, 102, .92); color: #fff;
+  padding: 8px 16px; border-radius: var(--radius-pill); font-size: .8rem;
+}
+
+/* ---------- Room rows ---------- */
+.room {
+  display: grid; grid-template-columns: 330px 1fr; gap: var(--pad);
+  background: #fff; border: 2px solid var(--tint); border-radius: var(--radius);
+  padding: var(--pad); border-top: 5px solid var(--blue);
+}
+.room--featured { border-top-color: var(--gold); }
+.room__media { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 330 / 260; }
+.room__media img { width: 100%; height: 100%; object-fit: cover; }
+.room__flag {
+  position: absolute; top: 16px; left: 16px; background: var(--gold); color: var(--navy);
+  font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 7px 14px; border-radius: var(--radius-pill);
+}
+.room__tag { color: var(--blue); font-style: italic; margin: 6px 0 14px; }
+.room__foot {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--gap); border-top: 2px solid var(--tint); margin-top: 26px; padding-top: 22px;
+}
+.room__price { font-size: 1.35rem; font-weight: 700; color: var(--navy); }
+.room__price small { font-size: .8rem; font-weight: 400; color: var(--char); }
+.room__price em { font-style: normal; font-size: .7rem; letter-spacing: .12em; color: var(--sky); text-transform: uppercase; display: block; }
+
+/* ---------- Split cards ---------- */
+.split__label { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sky); margin: 0 0 10px; }
+
+/* ---------- Stats ---------- */
+.stat { background: var(--tint); border-radius: var(--radius); padding: 22px var(--pad); }
+.stat strong { display: block; font-size: 1.55rem; color: var(--navy); font-family: "Playfair Display", serif; }
+.stat span { display: block; font-size: .9rem; }
+.stat em { font-style: normal; font-size: .8rem; color: var(--blue); }
+
+/* ---------- Quote ---------- */
+.quote { text-align: center; max-width: 62ch; margin-inline: auto; }
+.quote__mark { font-family: "Playfair Display", serif; font-size: 3.4rem; color: var(--sky); line-height: .5; }
+.quote p { font-size: 1.15rem; color: #fff; }
+.quote cite { font-style: normal; font-size: .85rem; color: var(--tint); }

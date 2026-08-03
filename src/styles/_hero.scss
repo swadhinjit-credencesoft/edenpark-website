@@ -1,0 +1,49 @@
+// ==========================================================================
+// Hero + page banner — signature swoosh and Maungawhau ridgeline.
+// ==========================================================================
+
+.hero { position: relative; overflow: hidden; background: var(--navy); }
+.hero__media { position: absolute; inset: 0; z-index: 0; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.hero__scrim {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(13,59,102,.94) 0%, rgba(13,59,102,.6) 55%, rgba(13,59,102,.1) 100%);
+}
+
+/* The swoosh: header gradient sweeping over the photo, with a white sliver edge */
+.swoosh {
+  position: absolute; top: 0; left: 0; width: 100%; height: 340px;
+  z-index: 2; pointer-events: none; display: block;
+}
+.banner .swoosh { height: 190px; }
+
+.ridge { position: absolute; right: 0; bottom: 0; width: min(46%, 560px); height: auto; z-index: 2; pointer-events: none; }
+.hero__inner { position: relative; z-index: 3; padding: clamp(64px, 9vw, 118px) 0 clamp(96px, 12vw, 150px); }
+.hero__body { max-width: 620px; color: #fff; }
+.hero h1 { color: #fff; }
+.hero__sub { color: var(--tint); font-size: 1.05rem; margin: 20px 0 30px; max-width: 54ch; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero__note { margin-top: 26px; font-size: .8rem; color: var(--tint); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.dots { display: inline-flex; gap: 8px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.45); display: block; }
+.dots i.is-on { background: #fff; }
+
+.pricecard {
+  position: absolute; right: 0; bottom: 40px; z-index: 3;
+  background: var(--navy); color: #fff; border-radius: 8px;
+  padding: 16px 18px; display: flex; align-items: center; gap: 18px;
+  box-shadow: var(--shadow);
+}
+.pricecard__label { font-size: .7rem; letter-spacing: .14em; color: var(--sky); text-transform: uppercase; }
+.pricecard__rate { font-size: 1.4rem; font-weight: 700; }
+.pricecard__rate small { font-size: .78rem; font-weight: 400; color: var(--tint); }
+
+/* ---------- Page banner (inner pages) ---------- */
+.banner { position: relative; background: var(--navy); overflow: hidden; }
+.banner__media { position: absolute; inset: 0; z-index: 0; }
+.banner__media img { width: 100%; height: 100%; object-fit: cover; }
+.banner__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(13,59,102,.94), rgba(13,59,102,.55) 60%, rgba(13,59,102,.15)); }
+.banner .ridge { width: min(38%, 430px); }
+.banner__inner { position: relative; z-index: 3; padding: 78px 0 74px; color: #fff; }
+.banner h1 { color: #fff; }
+.banner p { color: var(--tint); margin: 16px 0 0; max-width: 62ch; }

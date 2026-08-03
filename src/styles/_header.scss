@@ -1,0 +1,53 @@
+// ==========================================================================
+// Header — masthead with quick links and hamburger dropdown nav (original
+// design: hamburger on the left at all widths, quick links + CTA on right).
+// ==========================================================================
+
+.masthead {
+  background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 55%, var(--blue) 100%);
+  position: sticky; top: 0; z-index: 100;
+}
+.masthead__inner {
+  display: flex; align-items: center; gap: var(--gap);
+  min-height: 76px; position: relative;
+}
+.masthead__logo {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center;
+}
+.masthead__logo img { height: 42px; width: auto; }
+
+/* Quick links — Rooms / Find Us / FAQ, right side */
+.masthead__quick { display: flex; gap: 26px; margin-left: auto; }
+.masthead__quick a {
+  color: #fff; font-size: .78rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.masthead__quick a:hover { text-decoration: none; color: var(--tint); }
+.masthead__quick a[aria-current="page"] { border-bottom: 2px solid var(--gold); padding-bottom: 3px; }
+
+/* Primary nav — dropdown, opened by the hamburger at every width */
+.nav {
+  display: none; position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--navy); flex-direction: column; align-items: flex-start;
+  gap: 0; padding: 14px 24px 22px; z-index: 20;
+}
+.nav[data-open="true"] { display: flex; }
+.nav a { padding: 12px 0; width: 100%; }
+.nav a {
+  color: #fff; font-size: .82rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.nav a:hover, .nav a[aria-current="page"] { text-decoration: none; color: var(--tint); }
+.nav a[aria-current="page"] { border-bottom: 2px solid var(--gold); padding-bottom: 3px; }
+
+/* Hamburger — always visible, left side */
+.navtoggle {
+  display: block; background: none; border: 0; cursor: pointer;
+  padding: 10px; margin-left: -10px;
+}
+.navtoggle span { display: block; width: 26px; height: 3px; background: #fff; border-radius: 2px; }
+.navtoggle span + span { margin-top: 5px; }
+
+/* Book-now CTA sits at the far right (after the quick links) */
+.btn--book { margin-left: 0; }

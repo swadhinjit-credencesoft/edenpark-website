@@ -1,0 +1,36 @@
+// ==========================================================================
+// Misc page primitives — steps, checklist, transit rows, map box.
+// ==========================================================================
+
+/* ---------- Steps ---------- */
+.step__num {
+  width: 46px; height: 46px; border-radius: 50%; background: var(--navy); color: #fff;
+  display: grid; place-items: center; font-family: "Playfair Display", serif; font-size: 1.2rem;
+  font-weight: 700; margin-bottom: 18px;
+}
+
+/* ---------- Checklist ---------- */
+.checklist { list-style: none; margin: 0; padding: 0; }
+.checklist li {
+  display: flex; align-items: center; gap: 16px;
+  border: 2px solid var(--tint); border-radius: 10px; padding: 16px var(--pad);
+}
+.checklist li + li { margin-top: 14px; }
+.checklist i { flex: none; width: 22px; height: 22px; border: 2px solid var(--blue); border-radius: 4px; }
+
+/* ---------- Transit rows ---------- */
+.transit { list-style: none; margin: 0; padding: 0; }
+.transit li {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap);
+  border: 2px solid var(--tint); border-radius: 10px; padding: 18px var(--pad);
+}
+.transit li + li { margin-top: 12px; }
+.transit__txt { flex: 1 1 320px; }
+.transit__txt strong { color: var(--navy); display: block; }
+.transit__txt span { font-size: .9rem; }
+
+/* ---------- Map ---------- */
+.mapbox {
+  background: var(--tint); border-radius: var(--radius); padding: 60px var(--pad);
+  text-align: center;
+}
