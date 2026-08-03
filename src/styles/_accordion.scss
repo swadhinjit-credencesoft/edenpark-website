@@ -13,12 +13,4 @@
 .acc__panel { padding: 0 var(--pad) 24px; background: var(--tint); }
 .acc__panel p { margin: 20px 0 0; }
 .acc__panel p:first-child { margin-top: 22px; }
-.acc__panel .faq__list { margin: 16px 0 0; padding: 0; list-style: none; }
-.acc__panel .faq__list li {
-  position: relative; padding-left: 26px; margin: 8px 0 0; color: var(--ink);
-}
-.acc__panel .faq__list li::before {
-  content: ""; position: absolute; left: 4px; top: .62em;
-  width: 8px; height: 8px; border-radius: 50%; background: var(--blue);
-}
 .acc[data-open="false"] .acc__panel { display: none; }
