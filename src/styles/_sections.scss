@@ -112,3 +112,14 @@
 .quote__mark { font-family: "Playfair Display", serif; font-size: 3.4rem; color: var(--sky); line-height: .5; }
 .quote p { font-size: 1.15rem; color: #fff; }
 .quote cite { font-style: normal; font-size: .85rem; color: var(--tint); }
+
+/* ---------- Reviews carousel ---------- */
+.reviews { position: relative; }
+.reviews__dots {
+  display: flex; justify-content: center; gap: 8px; margin: 0 0 18px;
+}
+.reviews__dots i {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: rgba(255, 255, 255, .45); display: block; transition: background .3s;
+}
+.reviews__dots i.is-on { background: #fff; }

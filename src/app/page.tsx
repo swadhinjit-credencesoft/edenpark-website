@@ -5,6 +5,7 @@ import Swoosh from "@/components/Swoosh";
 import Ridge from "@/components/Ridge";
 import Tick from "@/components/Tick";
 import RoomCard from "@/components/RoomCard";
+import Reviews from "@/components/Reviews";
 import { FEATURED_ROOM } from "@/data/rooms";
 import { BOOK, SITE_URL } from "@/data/site";
 
@@ -248,16 +249,7 @@ export default function Home() {
 
       <section className="section section--navy roofed">
         <div className="wrap">
-          <blockquote className="quote">
-            <p className="eyebrow eyebrow-light">What our guests say</p>
-            <span className="quote__mark">“</span>
-            <p>
-              An absolute gem of a location. Literally walked across the road to the game, and the free parking
-              saved us a fortune compared to staying in the city centre. The room was immaculately clean and full
-              of character.
-            </p>
-            <cite>— Leisure guest · verified review</cite>
-          </blockquote>
+          <Reviews />
         </div>
       </section>
 
