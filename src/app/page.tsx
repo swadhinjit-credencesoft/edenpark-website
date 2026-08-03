@@ -95,7 +95,7 @@ export default function Home() {
               Villa exterior → Queen Studio interior → Eden Park at dusk
             </p>
           </div>
-          <div className="pricecard">
+          {/* <div className="pricecard">
             <div>
               <span className="pricecard__label">From</span>
               <span className="pricecard__rate">
@@ -105,7 +105,7 @@ export default function Home() {
             <a className="btn btn--gold btn--sm" href={BOOK} rel="noopener">
               Book now
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -123,25 +123,13 @@ export default function Home() {
               </span>
             </div>
             <div className="trust__item">
-              <span>Booking.com</span>
               <strong>
-                8.9<small>/10</small>
+                NZD 151<small>/ night</small>
               </strong>
+              <span>From — best rate guaranteed</span>
             </div>
-            <div className="trust__item">
-              <span>Location score</span>
-              <strong>
-                9.6<small>/10</small>
-              </strong>
-            </div>
-            <div className="trust__item">
-              <span>Staff / Hospitality</span>
-              <strong>
-                9.6<small>/10</small>
-              </strong>
-            </div>
-            <a className="btn btn--ghost btn--sm" href="https://www.booking.com/" rel="noopener nofollow">
-              Read Reviews
+            <a className="btn btn--gold" href={BOOK} rel="noopener">
+              Book now
             </a>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function Rooms() {
         sub="Modern, fully renovated spaces inside a historic 1910 villa — private kitchenettes, modern amenities and the ultimate city-fringe location."
       />
 
-      <section className="section">
+      {/* <section className="section">
         <div className="wrap">
           <div className="section__head">
             <p className="eyebrow">Ambience &amp; surroundings</p>
@@ -49,7 +49,7 @@ export default function Rooms() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section section--tint">
         <div className="wrap">
