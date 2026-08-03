@@ -7,7 +7,7 @@
 .hero__media img { width: 100%; height: 100%; object-fit: cover; }
 .hero__scrim {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(90deg, rgba(13,59,102,.1) 0%, rgba(13,59,102,.7) 65%, rgba(13,59,102,.1) 100%);
+   background: linear-gradient(90deg, rgba(13,59,102,.95) 0%, rgba(13,59,102,.6) 65%, rgba(13,59,102,.3) 100%);
 }
 
 /* The swoosh: header gradient sweeping over the photo, with a white sliver edge */
