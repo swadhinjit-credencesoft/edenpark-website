@@ -79,7 +79,7 @@ export default function Home() {
               Auckland accommodation tailored for seamless comfort.
             </p>
             <div className="hero__actions">
-              <a className="btn btn--gold" href={BOOK} rel="noopener">
+              <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
                 Book Direct &amp; Save
               </a>
               <Link className="btn btn--ghost" href="/rooms">
@@ -128,7 +128,7 @@ export default function Home() {
               </strong>
               <span>From — best rate guaranteed</span>
             </div>
-            <a className="btn btn--gold" href={BOOK} rel="noopener">
+            <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
               Book now
             </a>
           </div>
@@ -147,7 +147,7 @@ export default function Home() {
             <span className="club__perk">
               <Tick /> Guaranteed late check-out
             </span>
-            <a className="btn btn--gold" href={BOOK} rel="noopener">
+            <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
               Check availability
             </a>
           </div>

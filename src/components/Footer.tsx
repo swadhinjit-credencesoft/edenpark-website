@@ -37,7 +37,7 @@ export default function Footer() {
                 <li><Link href="/self-check-in">Self Check-In</Link></li>
                 <li><Link href="/blog">Blog</Link></li>
                 <li>
-                  <a href={BOOK} rel="noopener">
+                  <a href={BOOK} rel="noopener" target="_blank">
                     Book Now
                   </a>
                 </li>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>Guaranteed late check-out</li>
             </ul>
             <p style={{ marginTop: 22 }}>
-              <a className="btn btn--gold btn--sm" href={BOOK} rel="noopener">
+              <a className="btn btn--gold btn--sm" href={BOOK} rel="noopener" target="_blank">
                 Book Now
               </a>
             </p>

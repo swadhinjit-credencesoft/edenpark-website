@@ -48,7 +48,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <a className="btn btn--book" href={BOOK} rel="noopener">
+        <a className="btn btn--book" href={BOOK} rel="noopener" target="_blank">
           Book now
         </a>
       </div>

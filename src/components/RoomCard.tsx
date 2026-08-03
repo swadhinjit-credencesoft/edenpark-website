@@ -45,7 +45,7 @@ export default function RoomCard({
           <p className="room__price">
             <em>From</em>NZD {room.rate} <small>/ night, incl. taxes</small>
           </p>
-          <a className="btn btn--navy" href={BOOK} rel="noopener">
+          <a className="btn btn--navy" href={BOOK} rel="noopener" target="_blank">
             {cta}
           </a>
         </div>

@@ -2,8 +2,8 @@
 // Site-wide constants — booking engine, navigation, canonical domain.
 // ==========================================================================
 
-/** STAAH booking engine (confirm exact property URL with the client). */
-export const BOOK = "https://book.staah.net/";
+/** SwiftBook STAAH booking engine — property 587 (confirm with the client). */
+export const BOOK = "https://www.swiftbook.io/inst/#home?propertyId=587";
 
 /** Canonical domain for metadata / structured data. */
 export const SITE_URL = "https://www.edenparkmotel.co.nz";
