@@ -1,46 +1,45 @@
 # Eden Park Motel — Website
 
-Static HTML prototype built to **Brand Guidelines v2.0**. Every page is production-quality
-markup intended as the reference implementation for the Next.js + Contentful build.
+Next.js + TypeScript + SCSS site for Eden Park Motel, built to **Brand Guidelines v2.0**.
+The site is fully static and exports to plain HTML via `next.config.mjs`.
 
 ## Run it
 
-Any static server works — there is no build step.
-
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+npm install
+npm run dev        # development
+npm run build      # production build + static export to /out
+npm run typecheck  # tsc --noEmit
+npm run lint       # ESLint
 ```
 
 ## Pages
 
-| File | Page |
+| Route | Page |
 |---|---|
-| `index.html` | Home |
-| `rooms.html` | Rooms (Ambience & Surroundings + six room types) |
-| `faq.html` | FAQ |
-| `find-us.html` | Find Us |
-| `corporate.html` | Corporate Bookings |
-| `self-check-in.html` | Self Check-In |
-| `blog.html` | Blog (search, category filter, pagination) |
+| `/` | Home |
+| `/rooms` | Rooms (Ambience & Surroundings + six room types) |
+| `/faq` | FAQ |
+| `/find-us` | Find Us |
+| `/corporate` | Corporate Bookings |
+| `/self-check-in` | Self Check-In |
+| `/blog` | Blog (search, category filter) |
 
-Book Now links point to the STAAH booking engine via the `BOOK` constant in `build.py`.
+Book Now links point to the STAAH booking engine via the `BOOK` constant in `src/data/site.ts`.
 
 ## Structure
 
 ```
-assets/css/style.css   Brand token system, all components
-assets/js/main.js      Mobile nav, FAQ accordion, blog search/filter
-assets/img/            Property photography
-build.py               Regenerates all HTML from shared templates
+src/app/              App Router pages + layout + 404
+src/components/       Header, Footer, Banner, RoomCard, BlogFilter, SVG signature …
+src/data/             Content modules (rooms, FAQ, blog, transit, check-in, site constants)
+src/styles/           SCSS partials, imported by globals.scss
+public/assets/img/    Property photography
 ```
-
-Edit `build.py` and re-run `python3 build.py` rather than editing HTML by hand —
-the header, footer and nav are shared templates.
 
 ## Brand tokens
 
-Defined once in `:root` in `style.css`:
+Defined once in `src/styles/_tokens.scss`:
 
 | Token | Value | Role |
 |---|---|---|
@@ -50,31 +49,25 @@ Defined once in `:root` in `style.css`:
 | `--tint` | `#EAF3FA` | Background |
 | `--char` | `#2D3436` | Body text |
 | `--gold` | `#C9A227` | Booking CTAs only |
-| `--pad` | `30px` | Card/panel inner padding |
-| `--gap` | `22px` | Text-to-control clearance |
 
-Type: **Playfair Display** (display only) + **Inter** (everything functional), both self-hostable
-Google Fonts with macron support for te reo Māori.
-
+Type: **Playfair Display** (display only) + **Inter** (everything functional), Google Fonts.
 Signature element: the **Maungawhau ridgeline** — inline SVG in the hero and every page banner.
 
 ## Verified
 
-- 0 HTML parse errors, 0 missing assets, 0 JS errors
-- 0 horizontal overflow at 360 / 414 / 768 / 1024 / 1440 px
-- Every image has `alt`; one `<h1>` per page; `lang="en-NZ"`; all inputs labelled
-- Visible keyboard focus; `prefers-reduced-motion` respected
+- 0 TypeScript errors; production export builds clean
 - Hotel + FAQPage JSON-LD structured data
+- Per-page canonical + OpenGraph metadata
+- Accessible: skip link, `aria-current`/`aria-pressed` states, one `<h1>` per page, all images have `alt`
 
-## Handoff notes for the Next.js build
+## TODO
 
-1. **Blog filtering must be server-side.** The JS filter here is a prototype. Real category
-   pages need crawlable URLs (`/blog/events`) or the five SEO-targeted articles will not rank.
-2. **Confirm the STAAH property URL** — `BOOK` is currently a placeholder.
+1. **Blog articles are placeholders** — the "Read article" links point to `#`. Add real article pages
+   (per-category crawlable URLs like `/blog/events`) so the SEO-targeted posts can rank.
+2. **Confirm the STAAH property URL** — `BOOK` in `src/data/site.ts` is currently a placeholder.
 3. **Rates are indicative** and follow the client content document. They need a named owner
    or a live feed; always display with a "from" qualifier.
-4. **Images need responsive treatment** — convert to AVIF/WebP with `next/image` and add
-   `srcset`. Current JPEGs are unoptimised.
-5. **Verify the One-Bedroom Apartment photo.** The supplied image shows a full kitchen with
-   dishwasher and two single beds, which matches the Large Twin / Family Room specification.
-6. **Embed the map** on Find Us — placeholder block is marked in the markup.
+4. **Images ship unoptimised** (`unoptimized: true`). Convert to AVIF/WebP with `next/image` and
+   add `srcset` when the source asset set is upgraded.
+5. **Embed the map** on Find Us — placeholder block is marked in `src/app/find-us/page.tsx`.
+6. **Move Google Fonts to `next/font`** to silence the `no-page-custom-font` lint warning.
