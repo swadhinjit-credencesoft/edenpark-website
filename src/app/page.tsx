@@ -109,8 +109,7 @@ export default function Home() {
           </div> */}
         </div>
       </section>
-
-      <div className="wrap">
+<div className="wrap">
         <div className="trust roofed">
           <div className="trust__grid">
             <div className="trust__lead">
@@ -124,13 +123,25 @@ export default function Home() {
               </span>
             </div>
             <div className="trust__item">
+              <span>Booking.com</span>
               <strong>
-                NZD 151<small>/ night</small>
+                8.9<small>/10</small>
               </strong>
-              <span>From — best rate guaranteed</span>
             </div>
-            <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
-              Book now
+            <div className="trust__item">
+              <span>Location score</span>
+              <strong>
+                9.6<small>/10</small>
+              </strong>
+            </div>
+            <div className="trust__item">
+              <span>Staff / Hospitality</span>
+              <strong>
+                9.6<small>/10</small>
+              </strong>
+            </div>
+            <a className="btn btn--ghost btn--sm" href="https://www.booking.com/" rel="noopener nofollow">
+              Read Reviews
             </a>
           </div>
         </div>
