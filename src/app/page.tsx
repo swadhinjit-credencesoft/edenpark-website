@@ -140,8 +140,8 @@ export default function Home() {
                 9.6<small>/10</small>
               </strong>
             </div>
-            <a className="btn btn--ghost btn--sm" href="https://www.booking.com/" rel="noopener nofollow">
-              Read Reviews
+            <a className="btn btn--ghost btn--sm" href={BOOK}  rel="noopener nofollow">
+              Book now
             </a>
           </div>
         </div>
