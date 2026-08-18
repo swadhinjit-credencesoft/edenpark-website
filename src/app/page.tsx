@@ -140,7 +140,7 @@ export default function Home() {
                 9.6<small>/10</small>
               </strong>
             </div>
-            <a className="btn btn--ghost btn--sm" href={BOOK}  rel="noopener nofollow">
+             <a className="btn btn--gold btn--sm" href={BOOK} rel="noopener">
               Book now
             </a>
           </div>
