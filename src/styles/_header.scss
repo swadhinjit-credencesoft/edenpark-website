@@ -6,22 +6,24 @@
 .masthead {
   background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 55%, var(--blue) 100%);
   position: sticky; top: 0; z-index: 100;
+  width: 100%;
 }
 .masthead__inner {
-  display: flex; align-items: center; gap: var(--gap);
-  min-height: 76px; position: relative;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 76px; position: relative; gap: clamp(10px, 2vw, var(--gap));
 }
 .masthead__logo {
   position: absolute; left: 50%; transform: translateX(-50%);
-  display: flex; align-items: center;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
 }
-.masthead__logo img { height: 42px; width: auto; }
+.masthead__logo img { height: 42px; width: auto; max-width: 180px; object-fit: contain; }
 
 /* Quick links — Rooms / Find Us / FAQ, right side */
-.masthead__quick { display: flex; gap: 26px; margin-left: auto; }
+.masthead__quick { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 26px); margin-left: auto; margin-right: 14px; }
 .masthead__quick a {
   color: #fff; font-size: .78rem; font-weight: 600;
-  letter-spacing: .1em; text-transform: uppercase;
+  letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;
 }
 .masthead__quick a:hover { text-decoration: none; color: var(--tint); }
 .masthead__quick a[aria-current="page"] { border-bottom: 2px solid var(--gold); padding-bottom: 3px; }
@@ -30,12 +32,16 @@
 .nav {
   display: none; position: absolute; left: 0; right: 0; top: 100%;
   background: var(--navy); flex-direction: column; align-items: flex-start;
-  gap: 0; padding: 14px 24px 22px; z-index: 20;
+  gap: 0; padding: 14px 24px 22px; z-index: 120;
+  box-shadow: 0 16px 32px rgba(13, 59, 102, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
 }
 .nav[data-open="true"] { display: flex; }
 .nav a { padding: 12px 0; width: 100%; }
 .nav a {
-  color: #fff; font-size: .82rem; font-weight: 600;
+  color: #fff; font-size: .85rem; font-weight: 600;
   letter-spacing: .08em; text-transform: uppercase;
 }
 .nav a:hover, .nav a[aria-current="page"] { text-decoration: none; color: var(--tint); }
@@ -43,11 +49,12 @@
 
 /* Hamburger — always visible, left side */
 .navtoggle {
-  display: block; background: none; border: 0; cursor: pointer;
-  padding: 10px; margin-left: -10px;
+  display: flex; flex-direction: column; justify-content: center;
+  background: none; border: 0; cursor: pointer;
+  padding: 10px; margin-left: -10px; z-index: 10;
 }
-.navtoggle span { display: block; width: 26px; height: 3px; background: #fff; border-radius: 2px; }
+.navtoggle span { display: block; width: 24px; height: 3px; background: #fff; border-radius: 2px; }
 .navtoggle span + span { margin-top: 5px; }
 
-/* Book-now CTA sits at the far right (after the quick links) */
-.btn--book { margin-left: 0; }
+/* Book-now CTA sits at the far right */
+.btn--book { margin-left: 0; flex-shrink: 0; z-index: 10; }
