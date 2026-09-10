@@ -2,7 +2,7 @@ import Image from "next/image";
 import Swoosh from "./Swoosh";
 import Ridge from "./Ridge";
 
-interface BannerProps {
+export interface BannerProps {
   h1: string;
   sub: string;
   img?: string;

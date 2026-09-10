@@ -1,49 +1,52 @@
-// ==========================================================================
-// Find Us — transit links and neighbourhood hidden gems.
-// ==========================================================================
+import type { TransitItem, LocalGem } from "@/types/transit";
 
-export interface TransitRow {
-  name: string;
-  desc: string;
-  dist: string;
-}
+export type { TransitItem, LocalGem } from "@/types/transit";
 
-export const TRANSIT: TransitRow[] = [
-  { name: "Eden Park Stadium", desc: "Directly across the road. Inside the gates before the crowds line up.", dist: "2-minute walk" },
-  { name: "Kingsland Train Station", desc: "Traffic-free rail link straight to Britomart Station in the CBD.", dist: "2-minute walk" },
-   { name: "Spark Arena", desc: "Auckland's premier indoor venue for global music tours and major events.", dist: "10-minute drive" },
-    { name: "The Powerstation", desc: "Iconic Mount Eden live music venue and concert hall.", dist: "5-minute drive" },
-     { name: "The Glasshouse", desc: "Boutique venue space in the heart of Morningside.", dist: "2-minute drive" },
-      { name: "Western Springs Bowl & Stadium", desc: "Home to massive outdoor concerts, festivals, and racing.", dist: "5-minute drive" },
-  { name: "Westfield St Lukes", desc: "Major retail, department stores, supermarkets and essential services.", dist: "15-min walk / 5-min drive" },
-  { name: "Auckland CBD", desc: "Rapid connectivity — and 20 minutes direct to Auckland Airport.", dist: "10-minute drive" },
-  { name: "Mt Eden, SkyCity, Mission Bay", desc: "Our central fringe location puts greater Auckland within reach.", dist: "Within 30 minutes" },
+export const TRANSIT: TransitItem[] = [
+  {
+    name: "Eden Park Stadium",
+    dist: "2 min walk",
+    desc: "Directly across the road — reach your seat without transit queues or surge pricing.",
+  },
+  {
+    name: "Kingsland Train Station",
+    dist: "2 min walk",
+    desc: "Western Line rail direct to Britomart (CBD) and easy pedestrian link to Spark Arena.",
+  },
+  {
+    name: "Auckland CBD / Commercial Bay",
+    dist: "10 min drive",
+    desc: "10 minutes by car or 12 minutes on the western line from Kingsland Station.",
+  },
+  {
+    name: "Auckland Airport (AKL)",
+    dist: "20 min drive",
+    desc: "Direct airport access via SH20 without fighting city-centre congestion.",
+  },
+  {
+    name: "Westfield St Lukes",
+    dist: "15 min walk",
+    desc: "Supermarkets, banking, department stores and cinemas — or a 5-minute drive.",
+  },
 ];
 
-export interface Gem {
-  name: string;
-  dist: string;
-  desc: string;
-  img: string;
-}
-
-export const GEMS: Gem[] = [
+export const GEMS: LocalGem[] = [
   {
-    name: "Kingsland café & craft beer",
-    dist: "5-minute walk",
-    desc: "Independent espresso bars, brunch spots and craft beer pubs — ideal for a pre-event drink or a weekday meeting.",
+    name: "Kingsland Village Cafés & Craft Beer",
+    dist: "5 min walk",
+    desc: "Artisan bakeries, specialty coffee roasters and craft breweries lining New North Road.",
     img: "sur-kingsland.jpg",
   },
   {
-    name: "Dominion Road dining trail",
-    dist: "10-minute walk",
-    desc: "Auckland's legendary international food strip. Skip the tourist spots and find the hidden dumpling houses.",
-    img: "sur-signage.jpg",
+    name: "Dominion Road Dining Strip",
+    dist: "10 min walk",
+    desc: "Auckland's legendary international food street — hand-pulled noodles, dumplings and hot pot.",
+    img: "sur-gates.jpg",
   },
   {
-    name: "Gribblehirst Park",
-    dist: "Short stroll",
-    desc: "A quiet green space minutes away, perfect for a morning walk or a run before the day starts.",
+    name: "Morningside Precinct",
+    dist: "8 min walk",
+    desc: "Urban cider bars, dessert lounges and neighbourhood bistros in a repurposed industrial setting.",
     img: "sur-villa.jpg",
   },
 ];

@@ -1,21 +1,6 @@
-// ==========================================================================
-// Blog — posts and category filters.
-// ==========================================================================
+import type { Post, Category } from "@/types/post";
 
-export interface Post {
-  category: string;
-  label: string;
-  title: string;
-  excerpt: string;
-  seo: string;
-  img: string;
-  minutes: string;
-}
-
-export interface Category {
-  key: string;
-  label: string;
-}
+export type { Post, Category } from "@/types/post";
 
 export const CATS: Category[] = [
   { key: "all", label: "All" },

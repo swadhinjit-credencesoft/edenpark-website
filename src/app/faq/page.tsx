@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
-import FaqAccordion from "@/components/FaqAccordion";
-import { FAQ, faqAnswerText } from "@/data/faq";
-import { PHONE, PHONE_HREF, SITE_URL } from "@/data/site";
+import { Banner } from "@/components/common";
+import { FaqAccordion } from "@/components/features/faq";
+import { FAQ } from "@/data/faq";
+import { PHONE, PHONE_HREF, SITE_URL } from "@/config";
+import { generateFaqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -11,17 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL + "/faq" },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ.flatMap((g) => g.items).map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: faqAnswerText(item) },
-  })),
-};
-
 export default function Faq() {
+  const faqSchema = generateFaqSchema(FAQ);
   return (
     <>
       <Banner

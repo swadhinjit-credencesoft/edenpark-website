@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import type { FaqGroup } from "@/data/faq";
+import type { FaqGroup } from "@/types/faq";
 
-interface FaqAccordionProps {
+export interface FaqAccordionProps {
   groups: FaqGroup[];
 }
 

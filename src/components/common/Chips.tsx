@@ -1,4 +1,4 @@
-interface ChipsProps {
+export interface ChipsProps {
   items: string[];
   cls?: string;
 }

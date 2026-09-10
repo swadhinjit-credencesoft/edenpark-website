@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
-import { EMAIL, SITE_URL } from "@/data/site";
+import { Banner } from "@/components/common";
+import { EMAIL, SITE_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Corporate Bookings",

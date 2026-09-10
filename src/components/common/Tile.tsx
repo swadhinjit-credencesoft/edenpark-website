@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { TileSize } from "@/data/surroundings";
 
-interface TileProps {
+export interface TileProps {
   img: string;
   alt: string;
   caption: string;

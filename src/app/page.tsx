@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Swoosh from "@/components/Swoosh";
-import Ridge from "@/components/Ridge";
-import Tick from "@/components/Tick";
-import RoomCard from "@/components/RoomCard";
-import Reviews from "@/components/Reviews";
+import { Swoosh, Ridge, Tick, Reviews } from "@/components/common";
+import { RoomCard } from "@/components/features/rooms";
 import { FEATURED_ROOM } from "@/data/rooms";
-import { BOOK, SITE_URL } from "@/data/site";
+import { BOOK, SITE_URL } from "@/config";
+import { generateHotelSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Boutique Heritage. The Ultimate Event Hub.",
@@ -21,36 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-const hotelSchema = {
-  "@context": "https://schema.org",
-  "@type": "Hotel",
-  name: "Eden Park Motel",
-  description:
-    "Boutique heritage motel in a renovated 1910 villa, two minutes' walk from Eden Park Stadium, Auckland.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "36 Sandringham Road",
-    addressLocality: "Sandringham",
-    addressRegion: "Auckland",
-    postalCode: "1024",
-    addressCountry: "NZ",
-  },
-  telephone: "+64-9-846-4919",
-  priceRange: "NZD 151-209",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "8.9",
-    bestRating: "10",
-    reviewCount: "475",
-  },
-  amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Free parking", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Kitchenette", value: true },
-  ],
-};
-
 export default function Home() {
+  const hotelSchema = generateHotelSchema();
   return (
     <>
       <section className="hero">

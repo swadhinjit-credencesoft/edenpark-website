@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { BOOK, EMAIL, EMAIL_HREF, PHONE, PHONE_HREF, PHONE_INTL, PHONE_INTL_HREF } from "@/data/site";
+import { BOOK } from "@/config/booking";
+import {
+  ADDRESS,
+  EMAIL,
+  EMAIL_HREF,
+  PHONE,
+  PHONE_HREF,
+  PHONE_INTL,
+  PHONE_INTL_HREF,
+} from "@/config/site";
 
 /** Site-wide footer with quick links, contact and booking CTA. */
 export default function Footer() {
@@ -11,9 +20,9 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/assets/img/logo-white.png" alt="Eden Park Motel" />
             <p>
-              36 Sandringham Road (entrance)
+              {ADDRESS.mainEntrance} (entrance)
               <br />
-              or 57 Walters Road, Sandringham, Auckland
+              or {ADDRESS.pedestrianEntrance}, {ADDRESS.suburb}, {ADDRESS.city}
             </p>
             <p>
               <a href={PHONE_HREF}>{PHONE}</a>

@@ -1,27 +1,21 @@
-// ==========================================================================
-// Self check-in — the three-step process.
-// ==========================================================================
+import type { CheckInStep } from "@/types/checkIn";
 
-export interface CheckInStep {
-  num: string;
-  name: string;
-  copy: string;
-}
+export type { CheckInStep } from "@/types/checkIn";
 
 export const STEPS: CheckInStep[] = [
   {
     num: "1",
-    name: "Receive your code",
-    copy: "On the morning of your arrival we send a secure check-in email and SMS to the contact details on your reservation, containing your code and room allocation.",
+    name: "Receive your access code",
+    copy: "On the morning of your arrival, check your email or SMS for your secure digital key box code and room allocation.",
   },
   {
     num: "2",
-    name: "Park with ease",
-    copy: "Drive straight into the main entrance at 36 Sandringham Road and park in any designated guest space. No permits or dashboard tickets required.",
+    name: "Park on site",
+    copy: "Pull into our dedicated on-site parking area at 36 Sandringham Road. Every booking includes complimentary vehicle parking.",
   },
   {
     num: "3",
-    name: "Collect your key",
-    copy: "Use your code to open the key box and collect your room key. This is a self-service motel — there are no card-based door locks. Please return the key to the same box when you leave.",
+    name: "Collect your key & enter",
+    copy: "Locate the digital key box by the main entrance, enter your 4-digit PIN, retrieve your room key and make yourself at home.",
   },
 ];

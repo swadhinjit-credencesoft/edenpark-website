@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
-import Tile from "@/components/Tile";
-import RoomCard from "@/components/RoomCard";
+import { Banner, Tile } from "@/components/common";
+import { RoomCard } from "@/components/features/rooms";
 import { ROOMS } from "@/data/rooms";
 import { SURROUNDINGS } from "@/data/surroundings";
-import { SITE_URL } from "@/data/site";
+import { SITE_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Rooms",

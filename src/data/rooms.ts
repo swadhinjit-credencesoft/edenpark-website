@@ -1,19 +1,8 @@
-// ==========================================================================
-// ROOM DATA — matches Booking.com listing exactly (Guideline §14).
-// ==========================================================================
+import type { Room } from "@/types/room";
 
-export interface Room {
-  slug: string;
-  name: string;
-  roomId?: string;
-  flag: string;
-  featured: boolean;
-  tag: string;
-  copy: string;
-  feats: string[];
-  rate: string;
-}
+export type { Room } from "@/types/room";
 
+/** Room catalog with full specifications and STAAH inventory IDs */
 export const ROOMS: Room[] = [
   {
     slug: "queen",

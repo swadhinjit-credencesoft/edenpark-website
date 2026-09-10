@@ -1,9 +1,9 @@
 import Image from "next/image";
-import type { Room } from "@/data/rooms";
-import { getBookingUrl } from "@/data/site";
-import Chips from "./Chips";
+import type { Room } from "@/types/room";
+import { getBookingUrl } from "@/lib/utils/booking";
+import Chips from "@/components/common/Chips";
 
-interface RoomCardProps {
+export interface RoomCardProps {
   room: Room;
   anchor?: string;
   marginBottom?: boolean;
@@ -13,7 +13,7 @@ interface RoomCardProps {
   alt?: string;
 }
 
-/** A single room row with photo, features, price and booking CTA. */
+/** A single room row with photo, features, price and direct booking CTA. */
 export default function RoomCard({
   room,
   anchor,

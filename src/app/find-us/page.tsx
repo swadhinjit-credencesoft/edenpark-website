@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
-import Tile from "@/components/Tile";
+import { Banner, Tile } from "@/components/common";
 import { TRANSIT, GEMS } from "@/data/transit";
-import { SITE_URL } from "@/data/site";
+import { SITE_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Find Us",

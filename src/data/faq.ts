@@ -1,21 +1,6 @@
-// ==========================================================================
-// FAQ content, grouped by topic.
-// ==========================================================================
+import type { FaqGroup, FaqItem } from "@/types/faq";
 
-export interface FaqItem {
-  q: string;
-  /** Answer text, optionally split around an inline link. */
-  a: string;
-  /** Optional inline link rendered after `a`. */
-  link?: { href: string; label: string };
-  /** Optional text rendered after the inline link. */
-  after?: string;
-}
-
-export interface FaqGroup {
-  title: string;
-  items: FaqItem[];
-}
+export type { FaqGroup, FaqItem } from "@/types/faq";
 
 /** Plain-text answer including any inline link label (for JSON-LD). */
 export function faqAnswerText(item: FaqItem): string {

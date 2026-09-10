@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
-import BlogFilter from "@/components/BlogFilter";
-import { SITE_URL } from "@/data/site";
+import { Banner } from "@/components/common";
+import { BlogFilter } from "@/components/features/blog";
+import { SITE_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Blog",

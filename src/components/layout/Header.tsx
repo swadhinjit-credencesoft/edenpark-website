@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { BOOK, NAV, QUICK_LINKS } from "@/data/site";
+import { BOOK } from "@/config/booking";
+import { NAV, QUICK_LINKS } from "@/config/site";
 
 /** Masthead with sticky gradient, quick links and mobile nav toggle. */
 export default function Header() {

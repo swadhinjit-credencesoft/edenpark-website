@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-interface Review {
+export interface Review {
   text: string;
   author: string;
 }

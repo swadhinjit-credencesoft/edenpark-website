@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Banner from "@/components/Banner";
+import { Banner } from "@/components/common";
 import { STEPS } from "@/data/checkIn";
-import { PHONE_HREF, SITE_URL } from "@/data/site";
+import { PHONE_HREF, SITE_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Self Check-In",
