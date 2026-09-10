@@ -11,6 +11,10 @@ export interface TransitRow {
 export const TRANSIT: TransitRow[] = [
   { name: "Eden Park Stadium", desc: "Directly across the road. Inside the gates before the crowds line up.", dist: "2-minute walk" },
   { name: "Kingsland Train Station", desc: "Traffic-free rail link straight to Britomart Station in the CBD.", dist: "2-minute walk" },
+   { name: "Spark Arena", desc: "Auckland's premier indoor venue for global music tours and major events.", dist: "10-minute drive" },
+    { name: "The Powerstation", desc: "Iconic Mount Eden live music venue and concert hall.", dist: "5-minute drive" },
+     { name: "The Glasshouse", desc: "Boutique venue space in the heart of Morningside.", dist: "2-minute drive" },
+      { name: "Western Springs Bowl & Stadium", desc: "Home to massive outdoor concerts, festivals, and racing.", dist: "5-minute drive" },
   { name: "Westfield St Lukes", desc: "Major retail, department stores, supermarkets and essential services.", dist: "15-min walk / 5-min drive" },
   { name: "Auckland CBD", desc: "Rapid connectivity — and 20 minutes direct to Auckland Airport.", dist: "10-minute drive" },
   { name: "Mt Eden, SkyCity, Mission Bay", desc: "Our central fringe location puts greater Auckland within reach.", dist: "Within 30 minutes" },

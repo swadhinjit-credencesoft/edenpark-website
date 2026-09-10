@@ -159,6 +159,12 @@ export default function Home() {
             <span className="club__perk">
               <Tick /> Guaranteed late check-out
             </span>
+             <span className="club__perk">
+              <Tick /> Late Check-In with peace of mind
+            </span>
+             <span className="club__perk">
+              <Tick />Late Check-out available on request
+            </span>
             <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
               Check availability
             </a>
@@ -207,8 +213,7 @@ export default function Home() {
               <p className="split__label">The weekend event-goer</p>
               <h3>Entertainment &amp; family visits</h3>
               <p>
-                Skip post-event traffic and transport queues. A stone&apos;s throw from Eden Park Stadium, we are the choice
-                for sports and music fans — and the local base for Auckland families hosting visiting relatives.
+             Skip post-event traffic and long transport queues. Located directly across from Eden Park Stadium with seamless access to Spark Arena, The Powerstation, The Glasshouse, and Western Springs, we put you front-row for Auckland’s best live events  and offer a peaceful base for families hosting visiting relatives.
               </p>
               <p>
                 <Link href="/blog">Event-day guide →</Link>
@@ -248,6 +253,26 @@ export default function Home() {
               <strong>15 min</strong>
               <span>walk to Westfield St Lukes</span>
               <em>Or a 5 min drive</em>
+            </div>
+              <div className="stat">
+              <strong>10-12 min</strong>
+              <span>drive to Spark Arena</span>
+              <em>Or direct train via Kingsland</em>
+            </div>
+              <div className="stat">
+              <strong>5 min</strong>
+              <span>drive to The Powerstation</span>
+              <em>Mount Eden concert hub</em>
+            </div>
+              <div className="stat">
+              <strong>2 min</strong>
+              <span>drive to The Glasshouse</span>
+              <em>Or a simple 10 min walk</em>
+            </div>
+              <div className="stat">
+              <strong>5-7 min</strong>
+              <span>drive to Western Springs</span>
+              <em>Bowl & Stadium events</em>
             </div>
           </div>
           <p style={{ marginTop: 32 }}>

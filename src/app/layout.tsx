@@ -1,8 +1,22 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/data/site";
 import "../styles/globals.scss";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,16 +43,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-NZ">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      {/* suppressHydrationWarning: browser extensions inject attributes (e.g. cz-shortcut-listen) onto <body>; silence the resulting one-level-deep hydration warning */}
+    <html lang="en-NZ" className={`${inter.variable} ${playfair.variable}`}>
+      {/* suppressHydrationWarning: browser extensions inject attributes onto <body> */}
       <body suppressHydrationWarning>
         <a className="skip" href="#main">
           Skip to content

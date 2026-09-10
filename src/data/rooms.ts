@@ -5,6 +5,7 @@
 export interface Room {
   slug: string;
   name: string;
+  roomId?: string;
   flag: string;
   featured: boolean;
   tag: string;
@@ -17,6 +18,7 @@ export const ROOMS: Room[] = [
   {
     slug: "queen",
     name: "Queen Studio Room",
+    roomId: "157314",
     flag: "Our best seller",
     featured: true,
     tag: "Boutique comfort tailored for corporate travellers and event-goers.",
@@ -27,6 +29,7 @@ export const ROOMS: Room[] = [
   {
     slug: "apartment",
     name: "One-Bedroom Apartment",
+    roomId: "157320",
     flag: "",
     featured: false,
     tag: "Spacious multi-zone living for longer stays and families.",
@@ -37,6 +40,7 @@ export const ROOMS: Room[] = [
   {
     slug: "superking",
     name: "Superking Room",
+    roomId: "157318",
     flag: "",
     featured: false,
     tag: "Premium comfort with a spacious superking bed.",
@@ -47,6 +51,7 @@ export const ROOMS: Room[] = [
   {
     slug: "exec-studio",
     name: "Executive Studio",
+    roomId: "157317",
     flag: "",
     featured: false,
     tag: "Expansive studio living with premium bedding.",
@@ -57,6 +62,7 @@ export const ROOMS: Room[] = [
   {
     slug: "family",
     name: "Large Twin / Family Room",
+    roomId: "157321",
     flag: "Largest layout",
     featured: false,
     tag: "Flexible bedding for groups, concerts and sports travel.",
@@ -67,6 +73,7 @@ export const ROOMS: Room[] = [
   {
     slug: "small",
     name: "Small Studio Room",
+    roomId: "157313",
     flag: "Best value",
     featured: false,
     tag: "Compact, efficient and budget-conscious.",
