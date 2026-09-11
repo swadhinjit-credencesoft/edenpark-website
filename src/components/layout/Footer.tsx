@@ -58,7 +58,7 @@ export default function Footer() {
             <ul>
               <li>Best rate guaranteed</li>
               <li>Free on-site parking</li>
-              <li>Guaranteed late check-out</li>
+              <li>Late Check-Out Upon Request</li>
             </ul>
             <p style={{ marginTop: 22 }}>
               <a className="btn btn--gold btn--sm" href={BOOK} rel="noopener" target="_blank">

@@ -40,9 +40,9 @@ export default function Home() {
           <div className="hero__body">
             <p className="eyebrow eyebrow-light">A fully renovated 1910 villa</p>
             <h1>
-              Boutique Heritage.
+          Convenient Comfort 
               <br />
-              The Ultimate Event Hub.
+             at Eden Park
             </h1>
             <p className="hero__sub">
               Experience the charm of our historic 1910 Villa, sitting directly at the doorstep of Eden Park.
@@ -123,12 +123,6 @@ export default function Home() {
           <h2>The Eden Park Advantage: Book Direct &amp; Unlock More</h2>
           <p className="lede">Skip the third-party booking fees and secure the best rate guaranteed. Every direct booking includes:</p>
           <div className="club">
-            <span className="club__perk">
-              <Tick /> Complimentary on-site parking
-            </span>
-            <span className="club__perk">
-              <Tick /> Guaranteed late check-out
-            </span>
              <span className="club__perk">
               <Tick /> Late Check-In with peace of mind
             </span>
