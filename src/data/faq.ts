@@ -20,10 +20,6 @@ export const FAQ: FaqGroup[] = [
         a: "Check-in is from 2:00 PM and check-out is by 10:00 AM. Book direct and you also get late check-out upon request (subject to availability).",
       },
       {
-        q: "Bookings through Third Party Channels (like Booking.com/ Expedia, etc)",
-        a: "For bookings made via external Third party channels where early check-outs or uncollected payments pose a risk, self/late check-ins is strictly restricted to prior arrangment only, ensuring valid credit card details and pre-settlement are securely obtained before arrival.",
-      },
-      {
         q: "Can I store luggage before check-in or after check-out?",
         a: "Yes. Arrive early for a meeting or drop your bags before heading across the road to an event — our team will store your luggage safely.",
       },
@@ -52,6 +48,10 @@ export const FAQ: FaqGroup[] = [
       {
         q: "What is included in the kitchenettes?",
         a: "Every room has a private kitchenette with a refrigerator, microwave, toaster, electric kettle and essential kitchenware. The Large Twin / Family Room also has a built-in dishwasher.",
+      },
+       {
+        q: "Bookings through Third Party Channels (like Booking.com/ Expedia, etc)",
+        a: "For bookings made via external Third party channels where early check-outs or uncollected payments pose a risk, self/late check-ins is strictly restricted to prior arrangment only, ensuring valid credit card details and pre-settlement are securely obtained before arrival.",
       },
       {
         q: "How does self check-in work?",

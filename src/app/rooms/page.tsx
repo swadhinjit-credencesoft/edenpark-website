@@ -20,7 +20,7 @@ export default function Rooms() {
   return (
     <>
       <Banner
-        h1="Boutique stays. Heritage charm."
+        h1="Convenient Comfort at Eden Park."
         sub="Modern, fully renovated spaces inside a historic 1910 villa — private kitchenettes, modern amenities and the ultimate city-fringe location."
       />
 

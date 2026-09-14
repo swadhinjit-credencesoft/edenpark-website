@@ -51,7 +51,7 @@ export const ROOMS: Room[] = [
   {
     slug: "family",
     name: "Large Twin / Family Room",
-    roomId: "157321",
+    roomId: "157320",
     flag: "Largest layout",
     featured: false,
     tag: "Flexible bedding for groups, concerts and sports travel.",

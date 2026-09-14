@@ -13,6 +13,26 @@ export const TRANSIT: TransitItem[] = [
     dist: "2 min walk",
     desc: "Western Line rail direct to Britomart (CBD) and easy pedestrian link to Spark Arena.",
   },
+   {
+    name: "Spark Arena",
+    dist: "10-minute drive",
+    desc: "Auckland's premier indoor venue for global music tours and major events.",
+  },
+   {
+    name: "The Powerstation",
+    dist: "5-minute drive",
+    desc: "Iconic Mount Eden live music venue and concert hall.",
+  },
+   {
+    name: "The Glasshouse",
+    dist: "2-minute drive",
+    desc: "Boutique venue space in the heart of Morningside.",
+  },
+    {
+    name: "Western Springs Bowl & Stadium",
+    dist: "5-minute drive",
+    desc: "Home to massive outdoor concerts, festivals, and racing.",
+  },
   {
     name: "Auckland CBD / Commercial Bay",
     dist: "10 min drive",
