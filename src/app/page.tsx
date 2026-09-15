@@ -8,7 +8,7 @@ import { BOOK, SITE_URL } from "@/config";
 import { generateHotelSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Boutique Heritage. The Ultimate Event Hub.",
+  title: "Convenient Comfort at Eden Park",
   description:
     "A fully renovated 1910 villa two minutes' walk from Eden Park Stadium. Free parking, kitchenettes and genuine Kiwi hospitality. Book direct for the best rate.",
   alternates: { canonical: SITE_URL + "/" },
