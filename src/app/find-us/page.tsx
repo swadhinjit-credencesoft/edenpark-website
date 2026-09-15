@@ -2,15 +2,44 @@ import type { Metadata } from "next";
 import { Banner, Tile } from "@/components/common";
 import { TRANSIT, GEMS } from "@/data/transit";
 import { SITE_URL } from "@/config";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Find Us",
+  title: "Location & Directions",
   description:
-    "36 Sandringham Road, Sandringham, Auckland. Two minutes' walk to Eden Park Stadium and Kingsland Station, with free on-site parking.",
-  alternates: { canonical: SITE_URL + "/find-us" },
+    "Find Eden Park Motel at 36 Sandringham Road, Auckland. 2 minutes' walk to Eden Park Stadium and Kingsland Station. Free on-site parking for all guests.",
+  alternates: { canonical: `${SITE_URL}/find-us` },
+  openGraph: {
+    title: "Location & Directions | Eden Park Motel Auckland",
+    description:
+      "36 Sandringham Road, Auckland. Two minutes' walk to Eden Park Stadium and Kingsland Station with free on-site parking.",
+    url: `${SITE_URL}/find-us`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/sur-gates.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eden Park Stadium Gates near Eden Park Motel",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Location & Directions | Eden Park Motel Auckland",
+    description:
+      "Directly across from Eden Park Stadium, 2 min walk to Kingsland Station with free on-site parking.",
+    images: ["/assets/img/sur-gates.jpg"],
+  },
 };
 
 export default function FindUs() {
+  const localBusinessSchema = generateLocalBusinessSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Find Us", url: `${SITE_URL}/find-us` },
+  ]);
   return (
     <>
       <Banner
@@ -105,6 +134,15 @@ export default function FindUs() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   );
 }

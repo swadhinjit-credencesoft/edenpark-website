@@ -2,15 +2,44 @@ import type { Metadata } from "next";
 import { Banner } from "@/components/common";
 import { STEPS } from "@/data/checkIn";
 import { PHONE_HREF, SITE_URL } from "@/config";
+import { generateHowToSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Self Check-In",
+  title: "Contactless Self Check-In Guide",
   description:
-    "Contactless self check-in at Eden Park Motel: receive your code, park on site, and collect your room key from the key box. Ideal for late arrivals.",
-  alternates: { canonical: SITE_URL + "/self-check-in" },
+    "Step-by-step contactless self check-in at Eden Park Motel Auckland. Receive your digital PIN, park on site, and access your key box for seamless arrival.",
+  alternates: { canonical: `${SITE_URL}/self-check-in` },
+  openGraph: {
+    title: "Contactless Self Check-In Guide | Eden Park Motel Auckland",
+    description:
+      "Arrive on your schedule with our simple 3-step digital key box check-in and complimentary on-site parking.",
+    url: `${SITE_URL}/self-check-in`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/hero-villa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eden Park Motel Contactless Self Check-In",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Self Check-In Guide | Eden Park Motel Auckland",
+    description:
+      "Seamless contactless arrival at Eden Park Motel with digital key box and free on-site parking.",
+    images: ["/assets/img/hero-villa.jpg"],
+  },
 };
 
 export default function SelfCheckIn() {
+  const howToSchema = generateHowToSchema(STEPS);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Self Check-In", url: `${SITE_URL}/self-check-in` },
+  ]);
   return (
     <>
       <Banner
@@ -88,6 +117,15 @@ export default function SelfCheckIn() {
           </p>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   );
 }

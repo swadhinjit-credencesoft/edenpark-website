@@ -1,15 +1,43 @@
 import type { Metadata } from "next";
 import { Banner } from "@/components/common";
 import { EMAIL, SITE_URL } from "@/config";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Corporate Bookings",
+  title: "Corporate Bookings & Business Stays",
   description:
-    "Midweek corporate accommodation on the Auckland city fringe. Free parking, fibre Wi-Fi, quiet double-glazed rooms and preferred corporate rates.",
-  alternates: { canonical: SITE_URL + "/corporate" },
+    "Midweek corporate accommodation on the Auckland city fringe. Free parking, high-speed fibre Wi-Fi, quiet double-glazed rooms and preferred corporate rates.",
+  alternates: { canonical: `${SITE_URL}/corporate` },
+  openGraph: {
+    title: "Corporate Bookings & Business Stays | Eden Park Motel Auckland",
+    description:
+      "Midweek business accommodation with free parking, fast Wi-Fi, quiet double glazing and custom corporate rates.",
+    url: `${SITE_URL}/corporate`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/room-exec-studio.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Executive Studio at Eden Park Motel Auckland",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Bookings | Eden Park Motel Auckland",
+    description:
+      "Midweek business accommodation in Auckland. Free parking, fast Wi-Fi & quiet double glazing.",
+    images: ["/assets/img/room-exec-studio.jpg"],
+  },
 };
 
 export default function Corporate() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Corporate Bookings", url: `${SITE_URL}/corporate` },
+  ]);
   return (
     <>
       <Banner
@@ -115,6 +143,11 @@ export default function Corporate() {
           </p>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   );
 }

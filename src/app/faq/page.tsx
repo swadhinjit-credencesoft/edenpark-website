@@ -3,17 +3,44 @@ import { Banner } from "@/components/common";
 import { FaqAccordion } from "@/components/features/faq";
 import { FAQ } from "@/data/faq";
 import { PHONE, PHONE_HREF, SITE_URL } from "@/config";
-import { generateFaqSchema } from "@/lib/schema";
+import { generateFaqSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Frequently Asked Questions",
   description:
-    "Answers on parking, check-in times, Eden Park event access, transit to the CBD, kitchenettes and self check-in at Eden Park Motel.",
-  alternates: { canonical: SITE_URL + "/faq" },
+    "Find answers on free parking, check-in times, Eden Park event access, transport to Auckland CBD, kitchenettes and contactless self check-in.",
+  alternates: { canonical: `${SITE_URL}/faq` },
+  openGraph: {
+    title: "Frequently Asked Questions | Eden Park Motel Auckland",
+    description:
+      "All your questions answered: free parking, event-day access, transit to CBD, and contactless arrival.",
+    url: `${SITE_URL}/faq`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/hero-villa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eden Park Motel FAQ Auckland",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Eden Park Motel Auckland",
+    description:
+      "Frequently asked questions about Eden Park Motel: free parking, check-in, event access & kitchenettes.",
+    images: ["/assets/img/hero-villa.jpg"],
+  },
 };
 
 export default function Faq() {
   const faqSchema = generateFaqSchema(FAQ);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "FAQ", url: `${SITE_URL}/faq` },
+  ]);
   return (
     <>
       <Banner
@@ -42,6 +69,7 @@ export default function Faq() {
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </>
   );
 }

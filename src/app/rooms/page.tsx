@@ -4,15 +4,44 @@ import { RoomCard } from "@/components/features/rooms";
 import { ROOMS } from "@/data/rooms";
 import { SURROUNDINGS } from "@/data/surroundings";
 import { SITE_URL } from "@/config";
+import { generateRoomsSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Rooms",
+  title: "Rooms & Rates",
   description:
-    "Six room types at Eden Park Motel: Queen Studio, One-Bedroom Apartment, Superking, Executive Studio, Family Room and Small Studio. From NZD 151 per night.",
-  alternates: { canonical: SITE_URL + "/rooms" },
+    "Explore six boutique room types at Eden Park Motel Auckland: Queen Studio, Executive Studio, One-Bedroom Apartment, Superking and Family Rooms. From NZD 151/night with free parking.",
+  alternates: { canonical: `${SITE_URL}/rooms` },
+  openGraph: {
+    title: "Rooms & Rates | Eden Park Motel Auckland",
+    description:
+      "Six boutique room configurations with private kitchenettes, double glazing and free parking. Book direct for the best rate.",
+    url: `${SITE_URL}/rooms`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/room-queen.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Queen Studio Room at Eden Park Motel Auckland",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rooms & Rates | Eden Park Motel Auckland",
+    description:
+      "Explore boutique rooms at Eden Park Motel. Free parking, kitchenettes & quiet double glazing.",
+    images: ["/assets/img/room-queen.jpg"],
+  },
 };
 
 export default function Rooms() {
+  const roomsSchema = generateRoomsSchema(ROOMS);
+  const breadcrumbsSchema = generateBreadcrumbSchema([
+    { name: "Rooms", url: `${SITE_URL}/rooms` },
+  ]);
   const lg = SURROUNDINGS.find((s) => s.size === "lg")!;
   const side = SURROUNDINGS.filter((s) => s.size === "sm");
   const row = SURROUNDINGS.filter((s) => s.size === "wide");
@@ -64,6 +93,15 @@ export default function Rooms() {
           ))}
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(roomsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsSchema) }}
+      />
     </>
   );
 }

@@ -10,12 +10,31 @@ import { generateHotelSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Convenient Comfort at Eden Park",
   description:
-    "A fully renovated 1910 villa two minutes' walk from Eden Park Stadium. Free parking, kitchenettes and genuine Kiwi hospitality. Book direct for the best rate.",
-  alternates: { canonical: SITE_URL + "/" },
+    "A fully renovated 1910 villa two minutes' walk from Eden Park Stadium. Free parking, kitchenettes, double glazing and genuine Kiwi hospitality. Book direct for best rates.",
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
-    title: "Boutique Heritage. The Ultimate Event Hub. | Eden Park Motel",
+    title: "Convenient Comfort at Eden Park | Eden Park Motel Auckland",
     description:
       "A fully renovated 1910 villa two minutes' walk from Eden Park Stadium. Free parking, kitchenettes and genuine Kiwi hospitality.",
+    url: `${SITE_URL}/`,
+    siteName: "Eden Park Motel",
+    images: [
+      {
+        url: "/assets/img/hero-villa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eden Park Motel exterior villa",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Convenient Comfort at Eden Park | Eden Park Motel Auckland",
+    description:
+      "Boutique accommodation directly across from Eden Park Stadium, Auckland. Free parking and kitchenettes.",
+    images: ["/assets/img/hero-villa.jpg"],
   },
 };
 
