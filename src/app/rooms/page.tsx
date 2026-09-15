@@ -56,8 +56,7 @@ export default function Rooms() {
             <p className="eyebrow">Our rooms</p>
             <h2>Six ways to stay</h2>
             <p className="lede">
-              <strong>Book direct</strong> to receive complimentary on-site parking and a guaranteed late
-              check-out.
+              <strong>Book direct</strong> to receive complimentary on-site parking and a guaranteed Late Check-Out Upon Request
             </p>
           </div>
           {ROOMS.map((room) => (

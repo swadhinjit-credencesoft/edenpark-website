@@ -132,10 +132,6 @@ export default function Home() {
              <span className="club__perk">
               <Tick />Late Check-out available on request
             </span>
-             <span className="club__perk">
-              <Tick />Guaranteed late check-out
-
-            </span>
             <a className="btn btn--gold" href={BOOK} rel="noopener" target="_blank">
               Check availability
             </a>
