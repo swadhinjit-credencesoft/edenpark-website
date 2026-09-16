@@ -9,3 +9,4 @@ export * from "./layout";
 export * from "./features/rooms";
 export * from "./features/faq";
 export * from "./features/blog";
+export * from "./features/wmr";

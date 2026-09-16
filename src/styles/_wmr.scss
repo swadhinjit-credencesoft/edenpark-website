@@ -1,0 +1,30 @@
+// ==========================================================================
+// WatchMyRate (WMR) — Eden Park Motel Theme Harmonization
+// ==========================================================================
+
+#rateModalBtn.rateModalBtn {
+  font-family: var(--font-inter, Inter, sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  box-shadow: -2px 4px 14px rgba(13, 59, 102, 0.25) !important;
+  border-radius: 6px 0 0 6px !important;
+  transition: background-color 0.2s var(--ease), transform 0.2s var(--ease) !important;
+  z-index: 90 !important; /* Kept below sticky masthead (100) & drawer nav (120) */
+  top: 130px;
+}
+
+#rateModalBtn.rateModalBtn:hover,
+#rateModalBtn.rateModalBtn:focus-visible {
+  text-decoration: none !important;
+  filter: brightness(0.92);
+}
+
+@media (max-width: 768px) {
+  #rateModalBtn.rateModalBtn {
+    font-size: 11px !important;
+    padding: 12px 6px !important;
+    top: 140px !important;
+  }
+}
