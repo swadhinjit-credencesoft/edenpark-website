@@ -21,6 +21,7 @@ export const POSTS: Post[] = [
     seo: "accommodation near Eden Park Stadium · Auckland event accommodation · motels near Eden Park",
     img: "sur-gates.jpg",
     minutes: "5 min read",
+    date: "2026-03-12",
   },
   {
     category: "food",
@@ -31,6 +32,7 @@ export const POSTS: Post[] = [
     seo: "Dominion Road restaurants · places to eat Sandringham · best dumplings Auckland",
     img: "sur-kingsland.jpg",
     minutes: "5 min read",
+    date: "2026-04-03",
   },
   {
     category: "business",
@@ -41,6 +43,7 @@ export const POSTS: Post[] = [
     seo: "Auckland corporate accommodation · business motels Auckland fringe · hotel with free parking",
     img: "sur-villa.jpg",
     minutes: "5 min read",
+    date: "2026-05-14",
   },
   {
     category: "heritage",
@@ -51,6 +54,7 @@ export const POSTS: Post[] = [
     seo: "boutique accommodation Auckland · heritage villa motel New Zealand · historic stays Auckland",
     img: "sur-signage.jpg",
     minutes: "5 min read",
+    date: "2026-06-25",
   },
   {
     category: "transit",
@@ -61,5 +65,6 @@ export const POSTS: Post[] = [
     seo: "how to get to Spark Arena · transport Kingsland station to CBD · motels near Britomart",
     img: "sur-sign-stadium.jpg",
     minutes: "5 min read",
+    date: "2026-07-02",
   },
 ];

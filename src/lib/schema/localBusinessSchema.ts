@@ -1,15 +1,15 @@
 import { ADDRESS, EMAIL, PHONE_INTL, SITE_URL } from "@/config/site";
 
 /**
- * Generate Schema.org LocalBusiness / LodgingBusiness for Location page.
+ * Generate Schema.org Hotel / LodgingBusiness structured data for Location page.
  */
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "@id": `${SITE_URL}/find-us#location`,
-    name: "Eden Park Motel Location & Directions",
-    url: `${SITE_URL}/find-us`,
+    "@type": "Hotel",
+    "@id": `${SITE_URL}/#hotel`,
+    name: "Eden Park Motel",
+    url: SITE_URL,
     telephone: PHONE_INTL,
     email: EMAIL,
     image: `${SITE_URL}/assets/img/sur-gates.jpg`,
@@ -27,8 +27,15 @@ export function generateLocalBusinessSchema() {
       longitude: 174.7431,
     },
     hasMap: "https://maps.google.com/?q=36+Sandringham+Road+Auckland",
-    publicAccess: true,
     smokingAllowed: false,
+    checkinTime: "14:00",
+    checkoutTime: "10:00",
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Free on-site parking", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Free high-speed Wi-Fi", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Contactless self check-in", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Walk to Eden Park Stadium", value: true },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

@@ -27,6 +27,9 @@ export function generateHotelSchema() {
     checkinTime: "14:00",
     checkoutTime: "10:00",
     petsAllowed: false,
+    parentOrganization: {
+      "@id": `${SITE_URL}/#organization`,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: ADDRESS.mainEntrance,

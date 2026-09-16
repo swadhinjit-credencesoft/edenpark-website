@@ -78,6 +78,7 @@ export default function BlogFilter() {
             <p className="post__seo">SEO focus: {post.seo}</p>
             <div className="post__foot">
               <span className="muted" style={{ fontSize: ".85rem" }}>
+                {post.date ? `${post.date} · ` : ""}
                 {post.minutes}
               </span>
               <a className="btn btn--navy btn--sm" href="#">

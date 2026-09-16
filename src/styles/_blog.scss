@@ -43,4 +43,4 @@ select.sortby {
   border: 2px solid var(--tint); border-radius: var(--radius-pill); color: var(--navy); font-size: .9rem;
 }
 .pager__pages a[aria-current="page"] { background: var(--navy); color: #fff; border-color: var(--navy); }
-.pager__step--next { background: var(--navy); color: #fff; border-color: var(--navy); font-weight: 600; }
+.pager__pages a.pager__step--next { background: var(--navy); color: #fff; border-color: var(--navy); font-weight: 600; }

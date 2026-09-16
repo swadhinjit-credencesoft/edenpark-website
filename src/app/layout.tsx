@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Header, Footer } from "@/components/layout";
 import { WatchMyRate } from "@/components/features/wmr";
 import { SITE_URL, SITE_METADATA } from "@/config/site";
+import { generateWebSiteSchema, generateOrganizationSchema } from "@/lib/schema";
 import "../styles/globals.scss";
 
 const inter = Inter({
@@ -85,6 +86,8 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const websiteSchema = generateWebSiteSchema();
+  const organizationSchema = generateOrganizationSchema();
   return (
     <html lang="en-NZ" className={`${inter.variable} ${playfair.variable}`}>
       {/* suppressHydrationWarning: browser extensions inject attributes onto <body> */}
@@ -96,6 +99,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <WatchMyRate />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </body>
     </html>
   );

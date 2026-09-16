@@ -4,3 +4,6 @@ export * from "./roomsSchema";
 export * from "./localBusinessSchema";
 export * from "./howToSchema";
 export * from "./breadcrumbSchema";
+export * from "./blogSchema";
+export * from "./corporateSchema";
+export * from "./websiteSchema";

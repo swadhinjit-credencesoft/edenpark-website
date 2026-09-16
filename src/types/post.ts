@@ -10,6 +10,7 @@ export interface Post {
   seo: string;
   img: string;
   minutes: string;
+  date?: string;
 }
 
 export interface Category {

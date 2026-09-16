@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Banner } from "@/components/common";
 import { EMAIL, SITE_URL } from "@/config";
-import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateCorporateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Corporate Bookings & Business Stays",
@@ -38,6 +38,7 @@ export default function Corporate() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Corporate Bookings", url: `${SITE_URL}/corporate` },
   ]);
+  const serviceSchema = generateCorporateServiceSchema();
   return (
     <>
       <Banner
@@ -144,6 +145,10 @@ export default function Corporate() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

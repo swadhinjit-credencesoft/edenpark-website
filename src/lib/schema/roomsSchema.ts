@@ -3,7 +3,8 @@ import { getBookingUrl } from "@/lib/utils/booking";
 import type { Room } from "@/types/room";
 
 /**
- * Generate Schema.org ItemList with HotelRoom entities for the Rooms page.
+ * Generate Schema.org Product/Offer entities for the Rooms page.
+ * Google supports Product rich results (price + availability) — HotelRoom does not.
  */
 export function generateRoomsSchema(rooms: Room[]) {
   return {
@@ -16,12 +17,16 @@ export function generateRoomsSchema(rooms: Room[]) {
       "@type": "ListItem",
       position: index + 1,
       item: {
-        "@type": "HotelRoom",
+        "@type": "Product",
         "@id": `${SITE_URL}/rooms#${room.slug}`,
         name: room.name,
         description: room.copy,
         image: `${SITE_URL}/assets/img/room-${room.slug}.jpg`,
         url: `${SITE_URL}/rooms#${room.slug}`,
+        brand: {
+          "@type": "Brand",
+          name: "Eden Park Motel",
+        },
         offers: {
           "@type": "Offer",
           price: room.rate,
@@ -30,10 +35,10 @@ export function generateRoomsSchema(rooms: Room[]) {
           url: getBookingUrl(room.roomId),
           priceValidUntil: "2027-12-31",
         },
-        amenityFeature: room.feats.map((feat) => ({
-          "@type": "LocationFeatureSpecification",
+        additionalProperty: room.feats.map((feat) => ({
+          "@type": "PropertyValue",
           name: feat,
-          value: true,
+          value: "Yes",
         })),
       },
     })),

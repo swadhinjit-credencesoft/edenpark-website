@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Banner } from "@/components/common";
 import { BlogFilter } from "@/components/features/blog";
 import { SITE_URL } from "@/config";
-import { generateBreadcrumbSchema } from "@/lib/schema";
+import { POSTS } from "@/data/posts";
+import { generateBlogSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Insider Guide & Local Auckland Blog",
@@ -39,6 +40,7 @@ export default function Blog() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Blog", url: `${SITE_URL}/blog` },
   ]);
+  const blogSchema = generateBlogSchema(POSTS);
 
   return (
     <>
@@ -53,6 +55,10 @@ export default function Blog() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
