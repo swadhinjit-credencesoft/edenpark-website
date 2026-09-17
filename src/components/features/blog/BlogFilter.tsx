@@ -2,22 +2,49 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CATS, POSTS } from "@/data/posts";
 
-/** Blog toolbar + posts — client-side search and category filter. */
+/** Sort orders for the list view. */
+const ORDERS: { key: "new" | "old"; label: string }[] = [
+  { key: "new", label: "Most recent" },
+  { key: "old", label: "Oldest first" },
+];
+
+/** Blog toolbar + posts — client-side search, category filter and sort. */
 export default function BlogFilter() {
   const [term, setTerm] = useState("");
   const [cat, setCat] = useState("all");
+  const [order, setOrder] = useState<"new" | "old">("new");
 
   const shown = useMemo(() => {
     const t = term.trim().toLowerCase();
-    return POSTS.filter((post) => {
+    const posts = POSTS.filter((post) => {
       const matchesCat = cat === "all" || post.category === cat;
-      const haystack = `${post.title} ${post.excerpt} ${post.seo}`.toLowerCase();
+      const body = post.content
+        .map((block) => `${block.heading ?? ""} ${block.paragraphs.join(" ")}`)
+        .join(" ");
+      const haystack = `${post.title} ${post.excerpt} ${post.seo} ${body}`.toLowerCase();
       const matchesTerm = !t || haystack.includes(t);
       return matchesCat && matchesTerm;
     });
-  }, [term, cat]);
+    return [...posts].sort((a, b) => {
+      const da = a.date ? new Date(a.date).getTime() : 0;
+      const db = b.date ? new Date(b.date).getTime() : 0;
+      return order === "new" ? db - da : da - db;
+    });
+  }, [term, cat, order]);
+
+  if (shown.length === 0) {
+    return (
+      <div className="toolbar__empty">
+        <p className="lede">No articles match your search.</p>
+        <button type="button" className="btn btn--navy" onClick={() => { setTerm(""); setCat("all"); }}>
+          Clear filters
+        </button>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -38,9 +65,16 @@ export default function BlogFilter() {
         </label>
         <label>
           <span className="skip">Sort articles</span>
-          <select className="sortby" defaultValue="Most recent">
-            <option>Most recent</option>
-            <option>Oldest first</option>
+          <select
+            className="sortby"
+            value={order}
+            onChange={(e) => setOrder(e.target.value as "new" | "old")}
+          >
+            {ORDERS.map((orderOption) => (
+              <option key={orderOption.key} value={orderOption.key}>
+                {orderOption.label}
+              </option>
+            ))}
           </select>
         </label>
         <span className="toolbar__count" id="post-count">
@@ -48,21 +82,21 @@ export default function BlogFilter() {
         </span>
       </div>
       <ul className="filters">
-        {CATS.map((c) => (
-          <li key={c.key}>
+        {CATS.map((category) => (
+          <li key={category.key}>
             <button
               className="filter"
-              data-filter={c.key}
-              aria-pressed={cat === c.key}
-              onClick={() => setCat(c.key)}
+              data-filter={category.key}
+              aria-pressed={cat === category.key}
+              onClick={() => setCat(category.key)}
             >
-              {c.label}
+              {category.label}
             </button>
           </li>
         ))}
       </ul>
       {shown.map((post) => (
-        <article className="post card" data-category={post.category} key={post.title}>
+        <article className="post card" data-category={post.category} key={post.slug}>
           <div className="post__media">
             <Image
               src={`/assets/img/${post.img}`}
@@ -75,33 +109,18 @@ export default function BlogFilter() {
             <span className="post__cat">{post.label}</span>
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>
-            <p className="post__seo">SEO focus: {post.seo}</p>
             <div className="post__foot">
               <span className="muted" style={{ fontSize: ".85rem" }}>
                 {post.date ? `${post.date} · ` : ""}
                 {post.minutes}
               </span>
-              <a className="btn btn--navy btn--sm" href="#">
+              <Link className="btn btn--navy btn--sm" href={`/blog/${post.slug}`}>
                 Read article
-              </a>
+              </Link>
             </div>
           </div>
         </article>
       ))}
-      <nav className="pager" aria-label="Article pages">
-        <span className="muted">Page 1 of 3 · 5 articles per page</span>
-        <div className="pager__pages">
-          <span className="pager__step muted">← Previous</span>
-          <a href="#" aria-current="page">
-            1
-          </a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a className="pager__step pager__step--next" href="#">
-            Next →
-          </a>
-        </div>
-      </nav>
     </>
   );
 }
