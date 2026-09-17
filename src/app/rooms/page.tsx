@@ -9,7 +9,7 @@ import { generateRoomsSchema, generateBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Rooms & Rates",
   description:
-    "Explore six boutique room types at Eden Park Motel Auckland: Queen Studio, Executive Studio, One-Bedroom Apartment, Superking and Family Rooms. From NZD 151/night with free parking.",
+    "Explore six boutique room types at Eden Park Motel Auckland: Queen Studio, Executive Studio, 1 Bedroom Super King , Superking and Family Rooms. From NZD 151/night with free parking.",
   alternates: { canonical: `${SITE_URL}/rooms` },
   openGraph: {
     title: "Rooms & Rates | Eden Park Motel Auckland",

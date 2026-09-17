@@ -22,11 +22,11 @@ Eden Park Motel is a boutique accommodation located in a historic, fully renovat
 
 ## Room Types & Configurations
 1. **Compact Studio** (RoomID: 157313): 15 m², Ground floor, double bed, private kitchenette, ensuite, heat pump/AC. Rates from NZD 151.
-2. **Queen Studio Room** (RoomID: 157314): 17 m², Best seller, large double bed, kitchenette, ensuite, Sky TV, high-speed Wi-Fi. Mobility-accessible unit available (RoomID: 157322). Rates from NZD 161.
-3. **Executive Studio (Queen)** (RoomID: 157317): 25 m², Extra large double bed, open-plan layout, landmark views, kitchenette, ensuite. Rates from NZD 180.
-4. **Superking Room** (RoomID: 157318): 20 m², Premium superking bed, kitchenette, ensuite, AC, custom styling. Rates from NZD 180.
-5. **One-Bedroom Apartment** (RoomID: 157320): 27 m², Separate living room + sofa bed, XL double bed, kitchenette, AC. Rates from NZD 185.
-6. **Large Twin / Family Room** (RoomID: 157321): 36 m², Largest layout, 1 superking or 2 singles, kitchen with dishwasher, ensuite. Rates from NZD 209.
+2. **Studio Queen  Room** (RoomID: 157314): 17 m², Best seller, large double bed, kitchenette, ensuite, Sky TV, high-speed Wi-Fi. Mobility-accessible unit available (RoomID: 157322). Rates from NZD 161.
+3. **Executive Queen (Queen)** (RoomID: 157317): 25 m², Extra large double bed, open-plan layout, landmark views, kitchenette, ensuite. Rates from NZD 180.
+4. ** Executive Executive Superking Room** (RoomID: 157318): 20 m², Premium superking bed, kitchenette, ensuite, AC, custom styling. Rates from NZD 180.
+5. **1 Bedroom Super king ** (RoomID: 157320): 27 m², Separate living room + sofa bed, XL double bed, kitchenette, AC. Rates from NZD 185.
+6. **Apartment** (RoomID: 157321): 36 m², Largest layout, 1 superking or 2 singles, kitchen with dishwasher, ensuite. Rates from NZD 209.
 
 ## Key Distances & Transit
 - **Eden Park Stadium**: 2 min walk (directly across the road)

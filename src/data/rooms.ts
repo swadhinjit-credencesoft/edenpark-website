@@ -17,8 +17,8 @@ export const ROOMS: Room[] = [
   },
   {
     slug: "apartment",
-    name: "One-Bedroom Apartment",
-    roomId: "157320",
+    name: "1 Bedroom Super King ",
+    roomId: "157318",
     flag: "",
     featured: false,
     tag: "Spacious multi-zone living for longer stays and families.",
@@ -28,7 +28,7 @@ export const ROOMS: Room[] = [
   },
   {
     slug: "superking",
-    name: "Superking Room",
+    name: "Executive Superking Room",
     roomId: "157318",
     flag: "",
     featured: false,
