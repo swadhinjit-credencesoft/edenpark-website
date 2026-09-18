@@ -29,7 +29,7 @@ export const ROOMS: Room[] = [
   {
     slug: "superking",
     name: "Executive Superking Room",
-    roomId: "157318",
+    roomId: "157319",
     flag: "",
     featured: false,
     tag: "Premium comfort with a spacious superking bed.",
