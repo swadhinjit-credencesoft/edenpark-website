@@ -43,9 +43,9 @@
 .chip--navy { background: var(--navy); color: #fff; }
 
 .grid { display: grid; gap: var(--card-gap); }
-.grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.grid--3 { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
-.grid--4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); }
 
 /* ---------- Direct booking club ---------- */
 .club { display: flex; flex-wrap: wrap; gap: var(--gap); align-items: center; margin-top: 24px; }
