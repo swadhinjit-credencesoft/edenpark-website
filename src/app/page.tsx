@@ -172,7 +172,6 @@ export default function Home() {
             room={FEATURED_ROOM}
             marginBottom={false}
             cta="Check availability"
-            alt="Queen Studio Room with bay windows and a queen bed"
           />
         </div>
       </section>

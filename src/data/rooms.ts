@@ -13,6 +13,8 @@ export const ROOMS: Room[] = [
     tag: "Boutique comfort tailored for corporate travellers and event-goers.",
     copy: "Our signature and most popular room choice. Designed with an optimal layout for up to two adults, the Queen Studio blends modern functionality with heritage charm. A mobility-accessible room is available on request.",
     feats: ["17 m²", "1 large double bed", "Private kitchenette", "Ensuite bathroom", "Sky TV & free Wi-Fi", "Mobility room available"],
+    image: "/assets/img/rooms/queen-studio/01-disabled-access.jpg",
+    images: ["/assets/img/rooms/queen-studio/01-disabled-access.jpg", "/assets/img/rooms/queen-studio/02-web-main.jpg", "/assets/img/rooms/queen-studio/03-panorama.jpg"],
     rate: "161",
   },
   {
@@ -24,6 +26,8 @@ export const ROOMS: Room[] = [
     tag: "Spacious multi-zone living for longer stays and families.",
     copy: "Apartment-style convenience on the city fringe. Spanning a generous 27 m², this layout features a separated master bedroom alongside a comfortable living zone with a flexible sofa bed. Ideal for families, small groups, or executives needing extra space.",
     feats: ["27 m²", "1 XL double + sofa bed", "Separate living room", "Private kitchenette", "Air conditioning", "Free Wi-Fi"],
+    image: "/assets/img/rooms/1-bedroom-super-king/01-photo.jpg",
+    images: ["/assets/img/rooms/1-bedroom-super-king/01-photo.jpg", "/assets/img/rooms/1-bedroom-super-king/02-lounge.jpg"],
     rate: "185",
   },
   {
@@ -35,6 +39,8 @@ export const ROOMS: Room[] = [
     tag: "Premium comfort with a spacious superking bed.",
     copy: "For guests who appreciate a little more breathing room without compromising on efficiency. A highly polished, comfortable space with a premium superking bed, custom styling and plenty of natural light.",
     feats: ["20 m²", "1 superking bed", "Private kitchenette", "Dedicated bathroom", "Air conditioning", "Free Wi-Fi"],
+    image: "/assets/img/rooms/executive-superking/01-photo.jpg",
+    images: ["/assets/img/rooms/executive-superking/01-photo.jpg", "/assets/img/rooms/executive-superking/02-photo.jpg"],
     rate: "180",
   },
   {
@@ -46,6 +52,8 @@ export const ROOMS: Room[] = [
     tag: "Expansive studio living with premium bedding.",
     copy: "An open-plan studio focused on comfort and space. An extra-large double bed and a generous 25 m² footprint make it the ideal retreat after a day in the CBD or an event at the stadium.",
     feats: ["25 m²", "1 XL double bed", "Open-plan layout", "Kitchenette & ensuite", "Landmark views", "Free Wi-Fi"],
+    image: "/assets/img/rooms/executive-studio/01-photo.jpg",
+    images: ["/assets/img/rooms/executive-studio/01-photo.jpg", "/assets/img/rooms/executive-studio/02-panorama.jpg"],
     rate: "180",
   },
   {
@@ -57,6 +65,8 @@ export const ROOMS: Room[] = [
     tag: "Flexible bedding for groups, concerts and sports travel.",
     copy: "Our largest layout, designed for groups travelling together for major sporting events, festivals or family getaways. At 36 m² it adapts to your needs, with a superking bed or two singles on request, plus a built-in dishwasher.",
     feats: ["36 m²", "1 superking or 2 singles", "Kitchen + dishwasher", "Private bathroom", "Air conditioning", "Free Wi-Fi"],
+    image: "/assets/img/rooms/family-room/01-photo.jpg",
+    images: ["/assets/img/rooms/family-room/01-photo.jpg", "/assets/img/rooms/family-room/02-guest-photo.jpg", "/assets/img/rooms/family-room/03-lounge.jpg", "/assets/img/rooms/family-room/04-guest-photo.jpg", "/assets/img/rooms/family-room/05-kitchen.jpg", "/assets/img/rooms/family-room/06-guest-photo.jpg", "/assets/img/rooms/family-room/07-guest-photo.jpg", "/assets/img/rooms/family-room/08-guest-photo.jpg", "/assets/img/rooms/family-room/09-guest-photo.jpg", "/assets/img/rooms/family-room/10-guest-photo.jpg", "/assets/img/rooms/family-room/11-guest-photo.jpg", "/assets/img/rooms/family-room/12-guest-photo.jpg", "/assets/img/rooms/family-room/13-guest-photo.jpg", "/assets/img/rooms/family-room/14-guest-photo.jpg"],
     rate: "209",
   },
   {
@@ -68,6 +78,8 @@ export const ROOMS: Room[] = [
     tag: "Compact, efficient and budget-conscious.",
     copy: "Perfect for solo business travellers or weekend visitors who want a cosy, efficient place to rest right next to the action. Great value on the ground floor, without cutting corners on air conditioning or a private kitchenette.",
     feats: ["15 m²", "1 large double bed", "Ground floor", "Kitchenette & ensuite", "Ironing & wardrobe", "Free Wi-Fi"],
+    image: "/assets/img/rooms/small-studio/01-compact-studio.jpg",
+    images: ["/assets/img/rooms/small-studio/01-compact-studio.jpg", "/assets/img/rooms/small-studio/02-compact-studio.jpg", "/assets/img/rooms/small-studio/03-bedroom.jpg", "/assets/img/rooms/small-studio/04-guest-photo.jpg", "/assets/img/rooms/small-studio/05-guest-photo.jpg", "/assets/img/rooms/small-studio/06-guest-photo.jpg", "/assets/img/rooms/small-studio/07-guest-photo.jpg", "/assets/img/rooms/small-studio/08-guest-photo.jpg", "/assets/img/rooms/small-studio/09-guest-photo.jpg", "/assets/img/rooms/small-studio/10-guest-photo.jpg", "/assets/img/rooms/small-studio/11-guest-photo.jpg", "/assets/img/rooms/small-studio/12-guest-photo.jpg"],
     rate: "151",
   },
 ];

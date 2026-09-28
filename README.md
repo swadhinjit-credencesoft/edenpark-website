@@ -64,10 +64,17 @@ Signature element: the **Maungawhau ridgeline** — inline SVG in the hero and e
 
 1. **Blog articles are placeholders** — the "Read article" links point to `#`. Add real article pages
    (per-category crawlable URLs like `/blog/events`) so the SEO-targeted posts can rank.
-2. **Confirm the STAAH property URL** — `BOOK` in `src/data/site.ts` is currently a placeholder.
-3. **Rates are indicative** and follow the client content document. They need a named owner
+2. **Rates are indicative** and follow the client content document. They need a named owner
    or a live feed; always display with a "from" qualifier.
-4. **Images ship unoptimised** (`unoptimized: true`). Convert to AVIF/WebP with `next/image` and
+3. **Images ship unoptimised** (`unoptimized: true`). Convert to AVIF/WebP with `next/image` and
    add `srcset` when the source asset set is upgraded.
-5. **Embed the map** on Find Us — placeholder block is marked in `src/app/find-us/page.tsx`.
-6. **Move Google Fonts to `next/font`** to silence the `no-page-custom-font` lint warning.
+4. **Embed the map** on Find Us — placeholder block is marked in `src/app/find-us/page.tsx`.
+5. **Move Google Fonts to `next/font`** to silence the `no-page-custom-font` lint warning.
+
+## SwiftBook / STAAH engine assets
+
+- Booking engine: `https://www.swiftbook.io/inst/#home?propertyId=623NTgtlEo4zEKC10hlUeJfusoktOl3Agi6N13`
+  (token confirmed; `getBookingUrl()` appends per-room `&RoomID=` for direct links).
+- Full index of engine image URLs + direct room links: **`docs/swiftbook-engine.md`**.
+- Room card photos were replaced with the engine's real photography (600px source).
+  Complete per-room gallery downloads live in `public/assets/img/swiftbook/rooms/<RoomID>/`.

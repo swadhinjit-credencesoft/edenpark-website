@@ -21,7 +21,7 @@ export function generateRoomsSchema(rooms: Room[]) {
         "@id": `${SITE_URL}/rooms#${room.slug}`,
         name: room.name,
         description: room.copy,
-        image: `${SITE_URL}/assets/img/room-${room.slug}.jpg`,
+        image: `${SITE_URL}${room.image ?? `/assets/img/room-${room.slug}.jpg`}`,
         url: `${SITE_URL}/rooms#${room.slug}`,
         brand: {
           "@type": "Brand",

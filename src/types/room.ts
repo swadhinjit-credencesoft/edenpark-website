@@ -24,4 +24,8 @@ export interface Room {
   copy: string;
   feats: string[];
   rate: string;
+  /** Primary image path (category folder) — e.g. `/assets/img/rooms/queen-studio/02-web-main.jpg`. */
+  image?: string;
+  /** Ordered photo gallery for the card slideshow. */
+  images: string[];
 }

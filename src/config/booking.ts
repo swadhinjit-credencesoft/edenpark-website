@@ -4,7 +4,10 @@
 
 export const BOOKING_CONFIG = {
   propertyId: 587,
-  baseUrl: "https://www.swiftbook.io/inst/#home?propertyId=587",
+  /** Canonical SwiftBook engine token (from Google Listing / Local Universal booking link). */
+  propertyRef: "623NTgtlEo4zEKC10hlUeJfusoktOl3Agi6N13",
+  baseUrl:
+    "https://www.swiftbook.io/inst/#home?propertyId=623NTgtlEo4zEKC10hlUeJfusoktOl3Agi6N13",
   roomIds: {
     compactStudio: "157313",
     studioQueen: "157314",

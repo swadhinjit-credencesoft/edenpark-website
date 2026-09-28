@@ -11,5 +11,5 @@ export function getBookingUrl(roomId?: string | number): string {
   if (!roomId) {
     return BOOKING_CONFIG.baseUrl;
   }
-  return `https://www.swiftbook.io/inst/#home?propertyId=${BOOKING_CONFIG.propertyId}&RoomID=${roomId}`;
+  return `https://www.swiftbook.io/inst/#home?propertyId=${BOOKING_CONFIG.propertyRef}&RoomID=${roomId}`;
 }
