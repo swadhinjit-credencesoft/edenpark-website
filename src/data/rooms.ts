@@ -40,7 +40,7 @@ export const ROOMS: Room[] = [
     copy: "For guests who appreciate a little more breathing room without compromising on efficiency. A highly polished, comfortable space with a premium superking bed, custom styling and plenty of natural light.",
     feats: ["20 m²", "1 superking bed", "Private kitchenette", "Dedicated bathroom", "Air conditioning", "Free Wi-Fi"],
     image: "/assets/img/rooms/executive-superking/01-photo.jpg",
-    images: ["/assets/img/rooms/executive-superking/01-photo.jpg", "/assets/img/rooms/executive-superking/02-photo.jpg"],
+    images: ["/assets/img/rooms/executive-superking/02-photo.jpg", "/assets/img/rooms/executive-superking/03-photo.jpg", "/assets/img/rooms/executive-superking/04-photo.jpg", "/assets/img/rooms/executive-superking/05-photo.jpg", "/assets/img/rooms/executive-superking/06-photo.jpg"],
     rate: "180",
   },
   {
