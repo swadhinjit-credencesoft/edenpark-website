@@ -13,8 +13,8 @@ export const ROOMS: Room[] = [
     tag: "Boutique comfort tailored for corporate travellers and event-goers.",
     copy: "Our signature and most popular room choice. Designed with an optimal layout for up to two adults, the Queen Studio blends modern functionality with heritage charm. A mobility-accessible room is available on request.",
     feats: ["17 m²", "1 large double bed", "Private kitchenette", "Ensuite bathroom", "Sky TV & free Wi-Fi", "Mobility room available"],
-    image: "/assets/img/rooms/queen-studio/01-disabled-access.jpg",
-    images: ["/assets/img/rooms/queen-studio/01-disabled-access.jpg", "/assets/img/rooms/queen-studio/02-web-main.jpg", "/assets/img/rooms/queen-studio/03-panorama.jpg"],
+    image: "/assets/img/room-queen.jpg",
+    images: ["/assets/img/rooms/queen-studio/02-photo.jpg", "/assets/img/rooms/queen-studio/03-photo.jpg", "/assets/img/rooms/queen-studio/04-photo.jpg", "/assets/img/rooms/queen-studio/05-photo.jpg", "/assets/img/rooms/queen-studio/06-photo.jpg", "/assets/img/rooms/queen-studio/07-photo.jpg", "/assets/img/rooms/queen-studio/08-photo.jpg", "/assets/img/rooms/queen-studio/09-photo.jpg", "/assets/img/rooms/queen-studio/10-photo.jpg", "/assets/img/rooms/queen-studio/11-photo.jpg", "/assets/img/rooms/queen-studio/12-photo.jpg", "/assets/img/rooms/queen-studio/13-photo.jpg", "/assets/img/rooms/queen-studio/14-photo.jpg"],
     rate: "161",
   },
   {
