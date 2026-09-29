@@ -52,8 +52,8 @@ export const ROOMS: Room[] = [
     tag: "Expansive studio living with premium bedding.",
     copy: "An open-plan studio focused on comfort and space. An extra-large double bed and a generous 25 m² footprint make it the ideal retreat after a day in the CBD or an event at the stadium.",
     feats: ["25 m²", "1 XL double bed", "Open-plan layout", "Kitchenette & ensuite", "Landmark views", "Free Wi-Fi"],
-    image: "/assets/img/rooms/executive-studio/01-photo.jpg",
-    images: ["/assets/img/rooms/executive-studio/01-photo.jpg", "/assets/img/rooms/executive-studio/02-panorama.jpg"],
+    image: "/assets/img/room-exec-studio.jpg",
+    images: ["/assets/img/rooms/executive-studio/02-photo.jpg", "/assets/img/rooms/executive-studio/03-photo.jpg", "/assets/img/rooms/executive-studio/04-photo.jpg", "/assets/img/rooms/executive-studio/05-photo.jpg", "/assets/img/rooms/executive-studio/06-photo.jpg", "/assets/img/rooms/executive-studio/07-photo.jpg"],
     rate: "180",
   },
   {
