@@ -78,8 +78,8 @@ export const ROOMS: Room[] = [
     tag: "Compact, efficient and budget-conscious.",
     copy: "Perfect for solo business travellers or weekend visitors who want a cosy, efficient place to rest right next to the action. Great value on the ground floor, without cutting corners on air conditioning or a private kitchenette.",
     feats: ["15 m²", "1 large double bed", "Ground floor", "Kitchenette & ensuite", "Ironing & wardrobe", "Free Wi-Fi"],
-    image: "/assets/img/rooms/small-studio/01-compact-studio.jpg",
-    images: ["/assets/img/rooms/small-studio/01-compact-studio.jpg", "/assets/img/rooms/small-studio/02-compact-studio.jpg", "/assets/img/rooms/small-studio/03-bedroom.jpg", "/assets/img/rooms/small-studio/04-guest-photo.jpg", "/assets/img/rooms/small-studio/05-guest-photo.jpg", "/assets/img/rooms/small-studio/06-guest-photo.jpg", "/assets/img/rooms/small-studio/07-guest-photo.jpg", "/assets/img/rooms/small-studio/08-guest-photo.jpg", "/assets/img/rooms/small-studio/09-guest-photo.jpg", "/assets/img/rooms/small-studio/10-guest-photo.jpg", "/assets/img/rooms/small-studio/11-guest-photo.jpg", "/assets/img/rooms/small-studio/12-guest-photo.jpg"],
+    image: "/assets/img/room-small.jpg",
+    images: ["/assets/img/rooms/small-studio/02-photo.jpg", "/assets/img/rooms/small-studio/03-photo.jpg", "/assets/img/rooms/small-studio/04-photo.jpg", "/assets/img/rooms/small-studio/05-photo.jpg", "/assets/img/rooms/small-studio/06-photo.jpg", "/assets/img/rooms/small-studio/07-photo.jpg", "/assets/img/rooms/small-studio/08-photo.jpg"],
     rate: "151",
   },
 ];
