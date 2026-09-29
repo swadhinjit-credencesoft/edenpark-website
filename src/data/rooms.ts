@@ -65,8 +65,8 @@ export const ROOMS: Room[] = [
     tag: "Flexible bedding for groups, concerts and sports travel.",
     copy: "Our largest layout, designed for groups travelling together for major sporting events, festivals or family getaways. At 36 m² it adapts to your needs, with a superking bed or two singles on request, plus a built-in dishwasher.",
     feats: ["36 m²", "1 superking or 2 singles", "Kitchen + dishwasher", "Private bathroom", "Air conditioning", "Free Wi-Fi"],
-    image: "/assets/img/rooms/family-room/01-photo.jpg",
-    images: ["/assets/img/rooms/family-room/01-photo.jpg", "/assets/img/rooms/family-room/02-guest-photo.jpg", "/assets/img/rooms/family-room/03-lounge.jpg", "/assets/img/rooms/family-room/04-guest-photo.jpg", "/assets/img/rooms/family-room/05-kitchen.jpg", "/assets/img/rooms/family-room/06-guest-photo.jpg", "/assets/img/rooms/family-room/07-guest-photo.jpg", "/assets/img/rooms/family-room/08-guest-photo.jpg", "/assets/img/rooms/family-room/09-guest-photo.jpg", "/assets/img/rooms/family-room/10-guest-photo.jpg", "/assets/img/rooms/family-room/11-guest-photo.jpg", "/assets/img/rooms/family-room/12-guest-photo.jpg", "/assets/img/rooms/family-room/13-guest-photo.jpg", "/assets/img/rooms/family-room/14-guest-photo.jpg"],
+    image: "/assets/img/room-family.jpg",
+    images: ["/assets/img/rooms/family-room/02-photo.jpg", "/assets/img/rooms/family-room/03-photo.jpg", "/assets/img/rooms/family-room/04-photo.jpg", "/assets/img/rooms/family-room/05-photo.jpg", "/assets/img/rooms/family-room/06-photo.jpg", "/assets/img/rooms/family-room/07-photo.jpg", "/assets/img/rooms/family-room/08-photo.jpg", "/assets/img/rooms/family-room/09-photo.jpg"],
     rate: "209",
   },
   {
