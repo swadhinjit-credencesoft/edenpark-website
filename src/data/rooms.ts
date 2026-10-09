@@ -26,8 +26,8 @@ export const ROOMS: Room[] = [
     tag: "Spacious multi-zone living for longer stays and families.",
     copy: "Apartment-style convenience on the city fringe. Spanning a generous 27 m², this layout features a separated master bedroom alongside a comfortable living zone with a flexible sofa bed. Ideal for families, small groups, or executives needing extra space.",
     feats: ["27 m²", "1 XL double + sofa bed", "Separate living room", "Private kitchenette", "Air conditioning", "Free Wi-Fi"],
-    image: "/assets/img/rooms/1-bedroom-super-king/01-photo.jpg",
-    images: ["/assets/img/rooms/1-bedroom-super-king/01-photo.jpg", "/assets/img/rooms/1-bedroom-super-king/02-lounge.jpg"],
+    image: "/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king1.avif",
+    images: ["/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king1.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king2.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king3.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king4.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king5.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king6.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king7.avif","/assets/img/rooms/1-bedroom-super-king/1-bedroom-super-king8.avif",],
     rate: "185",
   },
   {
