@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import { Header, Footer } from "@/components/layout";
+import { Header, Footer, BookingNotice } from "@/components/layout";
 import { WatchMyRate } from "@/components/features/wmr";
 import { SITE_URL, SITE_METADATA } from "@/config/site";
 import { generateWebSiteSchema, generateOrganizationSchema } from "@/lib/schema";
@@ -99,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <WatchMyRate />
+        <BookingNotice />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
